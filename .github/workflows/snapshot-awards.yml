@@ -1,0 +1,20 @@
+name: Snapshot award pages (dev helper)
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/project-thread-dde1i2]
+    paths: [".github/workflows/snapshot-awards.yml", "scripts/fetch_awards.py"]
+permissions:
+  contents: write
+jobs:
+  snap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - run: python scripts/fetch_awards.py raw MA000004 MA000009 MA000003 MA000002 MA000022 MA000119 MA000018 MA000100 MA000120 MA000016 MA000028 MA000010 MA000020 MA000038 MA000034 MA000005 MA000084 MA000058 MA000025 MA000027
+      - name: Commit snapshots to a separate branch
+        run: |
+          git config user.name "github-actions[bot]"; git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout --orphan award-snapshots
+          git rm -rq --cached . ; mkdir -p keep && mv raw keep/
+          git add keep/raw && git commit -qm "Award page snapshots" && git push -f origin award-snapshots
