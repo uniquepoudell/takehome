@@ -43,7 +43,7 @@
     return { income: income, income_tax: r2(it), medicare: r2(levy), help: r2(loan),
       total_tax: r2(total), net: r2(income - total), super: r2(income * R.super_rate) };
   }
-  root.PayCalc = { calculate: calculate };
+  root.PayCalc = { calculate: calculate, helpRepay: helpRepay };
   if (typeof module !== "undefined") module.exports = root.PayCalc;
 
   if (typeof document === "undefined") return;

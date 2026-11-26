@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
   schedule:
-    - cron: "20 0 * * 1"   # weekly rebuild keeps "Updated" dates fresh
+    - cron: "17 * * * *"   # hourly rebuild (owner request 2026-11-26)
   workflow_dispatch:
 
 permissions:
@@ -35,6 +35,11 @@ jobs:
         continue-on-error: true
       - name: Test
         run: python tests/test_paycheck.py
+      - name: Refresh award pay rates from the Fair Work award viewer
+        continue-on-error: true   # on failure the committed awards.json is used
+        run: |
+          python scripts/fetch_awards.py raw $(python -c "import awards; print(' '.join(awards.AWARDS))")
+          python awards.py parse raw
       - name: Build
         env:
           # Your domain, e.g. takehomecalc.com. Set under Settings > Secrets and variables > Actions > Variables.

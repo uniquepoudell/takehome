@@ -54,10 +54,30 @@ def test_js_matches_python():
         close(a, b, 0.02)
 
 
+def test_awards_data():
+    data = json.loads((HERE / "awards.json").read_text())
+    assert len(data["awards"]) >= 15
+    work = json.loads((HERE / "work.json").read_text())
+    floor = work["minimum_wage"]["entry_hourly"] - 1.0  # a few awards have junior-ish adult entry rows
+    for a in data["awards"]:
+        assert a["tables"] and a["min_hourly"] >= floor, (a["code"], a["min_hourly"])
+        for t in a["tables"]:
+            for r in t["rows"]:
+                assert 500 <= r["weekly"] <= 5000 and r["hourly"] > 0
+
+
+def test_awardparse_sample():
+    from awardparse import rate_tables
+    html = ("<p>Table 4—Minimum rates</p><table><tr><td>Employee classification</td><td>Minimum weekly rate</td><td>Minimum hourly rate</td></tr>"
+            "<tr><td></td><td>$</td><td>$</td></tr><tr><td>Level 1</td><td>1056.80</td><td>27.81</td></tr><tr><td>Level 2</td><td>1081.00</td><td>28.45</td></tr></table>")
+    t = rate_tables(html)
+    assert t[0]["caption"] == "Minimum rates" and t[0]["rows"][1]["hourly"] == 28.45
+
+
 def test_build():
     with tempfile.TemporaryDirectory() as d:
         n = build.build(Path(d) / "pay")
-        assert n > 360, n
+        assert n > 390, n
         page = (Path(d) / "pay" / "salary" / "100000.html").read_text()
         assert "$77,480" in page and "application/ld+json" in page
 

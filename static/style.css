@@ -50,3 +50,14 @@ summary { font-weight:700; cursor:pointer; }
 .ad { margin: 24px 0; min-height: 90px; }
 footer { border-top:1px solid var(--line); margin-top:40px; padding-top:8px; padding-bottom:24px; }
 @media (max-width: 520px) { #amount { width: 150px; } .field input, .field select { font-size: 1.15rem; } nav { gap: 2px 12px; } nav a { font-size: .88rem; } }
+.field small { display:block; color:var(--muted); font-size:.8rem; }
+.tool .field input { width: 150px; } .tool .field select { max-width: 100%; font-size: 1rem; }
+.tool .row { margin-bottom: 8px; }
+.grid-hours { display:grid; gap:8px; margin:12px 0; }
+.hr-row { display:grid; grid-template-columns: minmax(120px, 1fr) 80px auto 80px auto; gap:8px; align-items:center; }
+.hr-row input { font:inherit; padding:6px 8px; border:2px solid var(--line); border-radius:8px; background:var(--bg); color:var(--text); width:100%; }
+.list { padding-left: 18px; } .list li { margin: 4px 0; }
+ul.cards { list-style:none; padding:0; margin:0; }
+@media (max-width: 520px) { .hr-row { grid-template-columns: 1fr 64px auto 64px auto; font-size:.9rem; } .tool .field input { width: 130px; } }
+.award.raw { min-width: 0; } .award.raw th, .award.raw td { white-space: normal; text-align: left; vertical-align: top; }
+.award td:first-child { white-space: normal; min-width: 160px; }
