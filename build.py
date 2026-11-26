@@ -21,6 +21,8 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from tax import KINDS, RATES, calculate  # noqa: E402
+import tools  # noqa: E402
+import awards  # noqa: E402
 
 CFG = json.loads((HERE / "config.json").read_text(encoding="utf-8"))
 esc = html.escape
@@ -88,7 +90,7 @@ def page(path: str, title: str, desc: str, body: str, up: str, jsonld: dict | No
 <body>
 <header class="top"><div class="wrap">
   <a class="brand" href="{up}index.html"><img src="{up}static/icon.svg" alt="" width="30" height="30">{esc(CFG["name"])}</a>
-  <nav><a href="{up}index.html">Calculator</a><a href="{up}salaries.html">Salaries</a><a href="{up}guides/backpacker-tax.html">Backpacker tax</a><a href="{up}guides/student-visa-tax.html">Students</a><a href="{up}guides/foreign-resident-tax.html">Foreign residents</a></nav>
+  <nav><a href="{up}index.html">Tax calculator</a><a href="{up}pay-rates/index.html">Pay rates</a><a href="{up}tools/index.html">Work tools</a><a href="{up}salaries.html">Salaries</a><a href="{up}guides/index.html">Visa guides</a></nav>
 </div></header>
 <main class="wrap">
 {body}
@@ -98,7 +100,9 @@ def page(path: str, title: str, desc: str, body: str, up: str, jsonld: dict | No
   <p>Sister site: <a href="{esc(CFG["gorkhapay_url"])}">GorkhaPay</a>, compare money transfers to Nepal. Updated {date.today().isoformat()}.</p>
 </footer>
 <script>window.RATES={json.dumps({k: v for k, v in RATES.items() if not k.startswith("_") and k != "sources"})};</script>
+<script>window.WORK={json.dumps({k: v for k, v in tools.WORK.items() if not k.startswith("_")})};</script>
 <script src="{up}static/calc.js"></script>
+<script src="{up}static/tools.js"></script>
 </body>
 </html>
 """
@@ -287,6 +291,13 @@ def guide_page(slug: str) -> tuple[str, str]:
     return f"guides/{slug}.html", page(f"guides/{slug}.html", title, desc, body, up)
 
 
+def guides_index() -> str:
+    up = "../"
+    cards = "".join(f'<a class="card" href="{slug}.html"><strong>{esc(t.split(":")[0])}</strong><span>{esc(d)}</span><em>Read →</em></a>' for slug, (t, d, _) in GUIDES.items())
+    return page("guides/index.html", "Tax guides for visa holders in Australia", "Plain-English tax guides for backpackers, international students and foreign residents working in Australia.",
+                f'<h1>Tax guides by visa</h1><p class="lead">Plain-English guides for people working in Australia on a visa.</p><div class="cards">{cards}</div>{cross_sell(up)}', up)
+
+
 def index_page() -> str:
     up = ""
     popular = [40000, 50000, 60000, 65000, 70000, 75000, 80000, 85000, 90000, 100000, 110000, 120000, 130000, 150000, 200000]
@@ -306,6 +317,14 @@ def index_page() -> str:
 </section>
 {ad_slot()}
 <section><h2>Popular salaries</h2>{salary_list(popular, up)}<p><a href="salaries.html">All salaries and hourly rates →</a></p></section>
+<section><h2>Work and pay tools</h2><div class="cards">
+  <a class="card" href="pay-rates/index.html"><strong>Minimum wage and award rates</strong><span>${tools.MW["hourly"]:.2f} an hour from {tools.MW["from"]}, plus your award's rates.</span><em>Check your pay →</em></a>
+  <a class="card" href="tools/penalty-rates.html"><strong>Penalty rates and overtime</strong><span>Weekend, public holiday and overtime pay for a shift.</span><em>Calculate →</em></a>
+  <a class="card" href="tools/salary-packaging.html"><strong>Salary packaging</strong><span>Nurses, paramedics and charity workers: see your extra take-home.</span><em>Calculate →</em></a>
+  <a class="card" href="tools/casual-vs-permanent.html"><strong>Casual vs permanent</strong><span>Is the 25% loading worth giving up paid leave?</span><em>Compare →</em></a>
+  <a class="card" href="tools/notice-redundancy.html"><strong>Notice and redundancy pay</strong><span>Your minimum payout by years of service.</span><em>Calculate →</em></a>
+  <a class="card" href="tools/leave.html"><strong>Annual and sick leave</strong><span>How much leave you've built up, and leave loading.</span><em>Calculate →</em></a>
+</div></section>
 <section><h2>Guides by visa</h2><div class="cards">
   <a class="card" href="guides/backpacker-tax.html"><strong>Backpacker tax</strong><span>417 and 462 visas: 15% from the first dollar.</span><em>Read →</em></a>
   <a class="card" href="guides/student-visa-tax.html"><strong>International students</strong><span>Usually a resident for tax: the $18,200 tax-free threshold applies.</span><em>Read →</em></a>
@@ -372,6 +391,9 @@ def build(out: Path) -> int:
         p, c = hourly_page(r); pages[p] = c
     for slug in GUIDES:
         p, c = guide_page(slug); pages[p] = c
+    pages["guides/index.html"] = guides_index()
+    pages.update(tools.tool_pages(page, ad_slot, cross_sell, None))
+    pages.update(awards.award_pages(page, ad_slot, cross_sell))
     for p, c in pages.items():
         (out / p).parent.mkdir(parents=True, exist_ok=True)
         (out / p).write_text(c, encoding="utf-8")

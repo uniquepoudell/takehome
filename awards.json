@@ -1,0 +1,3663 @@
+{
+ "awards": [
+  {
+   "code": "MA000004",
+   "slug": "retail",
+   "short": "Retail",
+   "blurb": "Shops and supermarkets: sales assistants, checkout operators, shelf stackers, store managers.",
+   "name": "General Retail Industry Award 2020",
+   "min_hourly": 27.81,
+   "tables": [
+    {
+     "caption": "Minimum rates",
+     "rows": [
+      {
+       "name": "Retail Employee Level 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1056.8,
+       "hourly": 27.81
+      },
+      {
+       "name": "Retail Employee Level 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1081.0,
+       "hourly": 28.45
+      },
+      {
+       "name": "Retail Employee Level 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1097.8,
+       "hourly": 28.89
+      },
+      {
+       "name": "Retail Employee Level 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Retail Employee Level 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1165.1,
+       "hourly": 30.66
+      },
+      {
+       "name": "Retail Employee Level 6",
+       "group": "",
+       "detail": "",
+       "weekly": 1182.1,
+       "hourly": 31.11
+      },
+      {
+       "name": "Retail Employee Level 7",
+       "group": "",
+       "detail": "",
+       "weekly": 1241.4,
+       "hourly": 32.67
+      },
+      {
+       "name": "Retail Employee Level 8",
+       "group": "",
+       "detail": "",
+       "weekly": 1291.8,
+       "hourly": 33.99
+      }
+     ]
+    }
+   ],
+   "penalties": [
+    [
+     [
+      "Column 1 For overtime worked on",
+      "Column 2 Overtime rateFull-time and part-time employees % of minimum hourly rate of pay",
+      "Column 3 Overtime rateCasual employees % of minimum hourly rate of pay (inclusive of casual loading)"
+     ],
+     [
+      "Monday to Saturday—first 3 hours",
+      "150%",
+      "175%"
+     ],
+     [
+      "Monday to Saturday—after 3 hours",
+      "200%",
+      "225%"
+     ],
+     [
+      "Sunday",
+      "200%",
+      "225%"
+     ],
+     [
+      "Public holiday",
+      "250%",
+      "275%"
+     ]
+    ],
+    [
+     [
+      "Column 1 Time of ordinary hours worked",
+      "Column 2 Full-time and part-time employees",
+      "Column 3 Casual employees"
+     ],
+     [
+      "",
+      "% of minimum hourly rate",
+      "% of minimum hourly rate (inclusive of casual loading)"
+     ],
+     [
+      "Monday to Friday—after 6.00 pm",
+      "125%",
+      "150%"
+     ],
+     [
+      "Saturday—all ordinary hours",
+      "125%",
+      "150%"
+     ],
+     [
+      "Sunday – all ordinary hours",
+      "150%",
+      "175%"
+     ],
+     [
+      "Public holiday – all ordinary hours",
+      "225%",
+      "250%"
+     ]
+    ]
+   ],
+   "source": "https://awards.fairwork.gov.au/MA000004.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000009",
+   "slug": "hospitality",
+   "short": "Hospitality",
+   "blurb": "Hotels, pubs, motels, casinos and resorts: bar, kitchen, housekeeping and front office staff.",
+   "name": "Hospitality Industry (General) Award 2020",
+   "min_hourly": 25.74,
+   "tables": [
+    {
+     "caption": "Minimum rates",
+     "rows": [
+      {
+       "name": "Introductory level",
+       "group": "",
+       "detail": "",
+       "weekly": 978.1,
+       "hourly": 25.74
+      },
+      {
+       "name": "Level 1",
+       "group": "",
+       "detail": "Food and beverage attendant grade 1; Guest service grade 1; Kitchen attendant grade 1",
+       "weekly": 1004.9,
+       "hourly": 26.44
+      },
+      {
+       "name": "Level 2",
+       "group": "",
+       "detail": "Clerical grade 1; Cook grade 1; Door person/security officer grade 1; Food and beverage attendant grade 2; Front office grade 1; Gardener grade 1; Guest service grade 2; Kitchen attendant grade 2; Leisure attendant grade 1; Storeperson grade 1",
+       "weekly": 1029.1,
+       "hourly": 27.08
+      },
+      {
+       "name": "Level 3",
+       "group": "",
+       "detail": "Clerical grade 2; Cook grade 2; Food and beverage attendant grade 3; Fork-lift driver; Front office grade 2; Gardener grade 2; Guest service grade 3; Handyperson; Kitchen attendant grade 3; Leisure attendant grade 2; Storeperson grade 2; Timekeeper/security officer grade 2",
+       "weekly": 1062.9,
+       "hourly": 27.97
+      },
+      {
+       "name": "Level 4",
+       "group": "",
+       "detail": "Clerical grade 3; Cook (tradesperson) grade 3; Food and beverage attendant (tradesperson) grade 4; Front office grade 3; Gardener grade 3 (tradesperson); Guest service grade 4; Leisure attendant grade 3; Storeperson grade 3",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Level 5",
+       "group": "",
+       "detail": "Clerical supervisor; Cook (tradesperson) grade 4; Food and beverage supervisor; Front office supervisor; Gardener grade 4 (tradesperson); Guest service supervisor",
+       "weekly": 1189.4,
+       "hourly": 31.3
+      },
+      {
+       "name": "Level 6",
+       "group": "",
+       "detail": "Cook (tradesperson) grade 5",
+       "weekly": 1221.1,
+       "hourly": 32.13
+      }
+     ]
+    },
+    {
+     "caption": "Casino gaming minimum rates",
+     "rows": [
+      {
+       "name": "Introductory level",
+       "group": "",
+       "detail": "",
+       "weekly": 993.0,
+       "hourly": 26.13
+      },
+      {
+       "name": "Level 1",
+       "group": "",
+       "detail": "Casino electronic gaming employee grade 1",
+       "weekly": 1050.2,
+       "hourly": 27.64
+      },
+      {
+       "name": "Level 2",
+       "group": "",
+       "detail": "Casino electronic gaming employee grade 2; Casino equipment technician grade 1; Casino table gaming employee grade 1; Customer liaison officer; Gaming finance employee grade 1",
+       "weekly": 1084.1,
+       "hourly": 28.53
+      },
+      {
+       "name": "Level 3",
+       "group": "",
+       "detail": "Casino equipment technician grade 2; Gaming finance employee grade 2; Security officer grade 1",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Level 3A",
+       "group": "",
+       "detail": "Casino table gaming employee grade 2",
+       "weekly": 1171.7,
+       "hourly": 30.83
+      },
+      {
+       "name": "Level 4",
+       "group": "",
+       "detail": "Casino equipment technician grade 3; Gaming finance employee grade 3; Security officer grade 2",
+       "weekly": 1189.4,
+       "hourly": 31.3
+      },
+      {
+       "name": "Level 5",
+       "group": "",
+       "detail": "Casino table gaming employee grade 3; Gaming finance employee grade 4",
+       "weekly": 1224.7,
+       "hourly": 32.23
+      },
+      {
+       "name": "Level 6",
+       "group": "",
+       "detail": "Casino table gaming employee grade 4; Gaming finance employee grade 5; Surveillance operator",
+       "weekly": 1260.0,
+       "hourly": 33.16
+      }
+     ]
+    }
+   ],
+   "penalties": [
+    [
+     [
+      "Column 1 For overtime worked on",
+      "Column 2 Overtime rate (% of ordinary hourly rate)"
+     ],
+     [
+      "Monday to Friday—first 2 hours",
+      "150%"
+     ],
+     [
+      "Monday to Friday—after 2 hours",
+      "200%"
+     ],
+     [
+      "Midnight Friday to midnight Sunday",
+      "200%"
+     ],
+     [
+      "Rostered day off",
+      "200%"
+     ]
+    ],
+    [
+     [
+      "Column 1 Time of ordinary hours worked",
+      "Column 2 Full-time and part-time employees",
+      "Column 3 Casual employees"
+     ],
+     [
+      "",
+      "% of ordinary hourly rate",
+      "% of ordinary hourly rate (inclusive of casual loading)"
+     ],
+     [
+      "Monday to Friday – 7.00 am to 7.00 pm",
+      "100%",
+      "125%"
+     ],
+     [
+      "Monday to Friday – 7.00 pm to midnight",
+      "100% plus $2.95 per hour or part of an hour",
+      "125% plus $2.95 per hour or part of an hour"
+     ],
+     [
+      "Monday to Friday—midnight to 7.00 am",
+      "100% plus $4.42 per hour or part of an hour",
+      "125% plus $4.42 per hour or part of an hour"
+     ],
+     [
+      "Saturday",
+      "125%",
+      "150%"
+     ],
+     [
+      "Sunday",
+      "150%",
+      "175%"
+     ],
+     [
+      "Public holiday",
+      "225%",
+      "250%"
+     ]
+    ]
+   ],
+   "source": "https://awards.fairwork.gov.au/MA000009.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000003",
+   "slug": "fast-food",
+   "short": "Fast food",
+   "blurb": "Takeaway and fast food shops: counter staff, cooks and delivery drivers.",
+   "name": "Fast Food Industry Award 2020",
+   "min_hourly": 27.81,
+   "tables": [
+    {
+     "caption": "Minimum rates",
+     "rows": [
+      {
+       "name": "Fast food employee level 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1056.8,
+       "hourly": 27.81
+      },
+      {
+       "name": "Fast food employee level 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Fast food employee level 3—in charge of one or no person",
+       "group": "",
+       "detail": "",
+       "weekly": 1136.4,
+       "hourly": 29.91
+      },
+      {
+       "name": "Fast food employee level 3—in charge of 2 or more people",
+       "group": "",
+       "detail": "",
+       "weekly": 1150.4,
+       "hourly": 30.27
+      }
+     ]
+    }
+   ],
+   "penalties": [
+    [
+     [
+      "For overtime worked:",
+      "Full-time and part-time employees",
+      "Casual employees"
+     ],
+     [
+      "",
+      "% of minimum hourly rate",
+      "% of minimum hourly rate"
+     ],
+     [
+      "Monday to Saturday—first 2 hours",
+      "150",
+      "175"
+     ],
+     [
+      "Monday to Saturday—after 2 hours",
+      "200",
+      "225"
+     ],
+     [
+      "Sunday—all overtime hours",
+      "200",
+      "225"
+     ],
+     [
+      "Public holiday—all overtime hours",
+      "250",
+      "275"
+     ]
+    ],
+    [
+     [
+      "For ordinary hours worked:",
+      "Full-time and part-time employees",
+      "Casual employees"
+     ],
+     [
+      "",
+      "% of minimum hourly rate",
+      "% of minimum hourly rate"
+     ],
+     [
+      "Monday to Friday—between 10.00 pm and midnight",
+      "110",
+      "135"
+     ],
+     [
+      "Monday to Friday—between midnight and 6.00 am",
+      "115",
+      "140"
+     ],
+     [
+      "Saturday—any time of day",
+      "125",
+      "150"
+     ],
+     [
+      "Sunday (Level 1 employees)—any time of day",
+      "125",
+      "150"
+     ],
+     [
+      "Sunday (Level 2 and 3 employees)—any time of day",
+      "150",
+      "175"
+     ],
+     [
+      "Public holiday—any time of day",
+      "225",
+      "250"
+     ]
+    ]
+   ],
+   "source": "https://awards.fairwork.gov.au/MA000003.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000119",
+   "slug": "restaurant",
+   "short": "Restaurants and cafes",
+   "blurb": "Restaurants, cafes and catering: waiters, baristas, cooks and kitchen hands.",
+   "name": "Restaurant Industry Award 2020",
+   "min_hourly": 25.74,
+   "tables": [
+    {
+     "caption": "Minimum rates",
+     "rows": [
+      {
+       "name": "Introductory Level",
+       "group": "",
+       "detail": "",
+       "weekly": 978.1,
+       "hourly": 25.74
+      },
+      {
+       "name": "Level 1",
+       "group": "",
+       "detail": "Food and beverage attendant grade 1Kitchen attendant grade 1",
+       "weekly": 1004.9,
+       "hourly": 26.44
+      },
+      {
+       "name": "Level 2",
+       "group": "",
+       "detail": "Food and beverage attendant grade 2Cook grade 1Kitchen attendant grade 2Clerical grade 1Storeperson grade 1Door person/security officer grade 1",
+       "weekly": 1029.1,
+       "hourly": 27.08
+      },
+      {
+       "name": "Level 3",
+       "group": "",
+       "detail": "Food and beverage attendant grade 3Cook grade 2Kitchen attendant grade 3Clerical grade 2Storeperson grade 2Timekeeper/security officer grade 2Handyperson",
+       "weekly": 1062.9,
+       "hourly": 27.97
+      },
+      {
+       "name": "Level 4",
+       "group": "",
+       "detail": "Food and beverage attendant grade 4 (tradesperson)Cook grade 3 (tradesperson)Clerical grade 3Storeperson grade 3",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Level 5",
+       "group": "",
+       "detail": "Food and beverage supervisorCook grade 4 (tradesperson)Clerical supervisor",
+       "weekly": 1189.4,
+       "hourly": 31.3
+      },
+      {
+       "name": "Level 6",
+       "group": "",
+       "detail": "Cook grade 5 (tradesperson)",
+       "weekly": 1221.1,
+       "hourly": 32.13
+      }
+     ]
+    }
+   ],
+   "penalties": [
+    [
+     [
+      "Column 1 For overtime worked on",
+      "Column 2 Overtime rate(% of minimum hourly rate)"
+     ],
+     [
+      "Monday to Friday—first 2 hours",
+      "150"
+     ],
+     [
+      "Monday to Friday—after 2 hours",
+      "200"
+     ],
+     [
+      "Saturday—first 2 hours",
+      "175"
+     ],
+     [
+      "Saturday—after 2 hours",
+      "200"
+     ],
+     [
+      "Sunday—all time worked",
+      "200"
+     ],
+     [
+      "Rostered day off – all time worked",
+      "200"
+     ]
+    ],
+    [
+     [
+      "Column 1 Time of ordinary hours worked",
+      "Column 2 Full-time and part-time employees",
+      "Column 3 Casual employees – Introductory to Level 2",
+      "Column 4 Casual employees – Level 3 to Level 6"
+     ],
+     [
+      "",
+      "% of minimum hourly rate",
+      "% of minimum hourly rate (inclusive of casual loading)",
+      "% of minimum hourly rate (inclusive of casual loading)"
+     ],
+     [
+      "Monday to Friday – 6.00 am to 10.00 pm",
+      "100%",
+      "125%",
+      "125%"
+     ],
+     [
+      "Monday to Friday – 10.00 pm to midnight",
+      "100% plus $2.95 per hour or part of an hour",
+      "125% plus $2.95 per hour or part of an hour",
+      "125% plus $2.95 per hour or part of an hour"
+     ],
+     [
+      "Monday to Friday – midnight to 6.00 am",
+      "100% plus $4.42 per hour or part of an hour",
+      "125% plus $4.42 per hour or part of an hour",
+      "125% plus $4.42 per hour or part of an hour"
+     ],
+     [
+      "Saturday",
+      "125%",
+      "150%",
+      "150%"
+     ],
+     [
+      "Sunday",
+      "150%",
+      "150%",
+      "175%"
+     ],
+     [
+      "Public holiday",
+      "225%",
+      "250%",
+      "250%"
+     ]
+    ]
+   ],
+   "source": "https://awards.fairwork.gov.au/MA000119.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000002",
+   "slug": "clerks",
+   "short": "Office and admin (clerks)",
+   "blurb": "Office workers in private businesses: receptionists, admin assistants, data entry, accounts clerks.",
+   "name": "Clerks—Private Sector Award 2020",
+   "min_hourly": 26.97,
+   "tables": [
+    {
+     "caption": "Minimum rates",
+     "rows": [
+      {
+       "name": "Level 1—Year 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1024.7,
+       "hourly": 26.97
+      },
+      {
+       "name": "Level 1—Year 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1073.1,
+       "hourly": 28.24
+      },
+      {
+       "name": "Level 1—Year 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1106.2,
+       "hourly": 29.11
+      },
+      {
+       "name": "Level 2—Year 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Level 2—Year 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1139.9,
+       "hourly": 30.0
+      },
+      {
+       "name": "Level 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1182.1,
+       "hourly": 31.11
+      },
+      {
+       "name": "Call centre principal customer contact specialist",
+       "group": "",
+       "detail": "",
+       "weekly": 1190.4,
+       "hourly": 31.33
+      },
+      {
+       "name": "Level 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1241.4,
+       "hourly": 32.67
+      },
+      {
+       "name": "Level 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1291.8,
+       "hourly": 33.99
+      },
+      {
+       "name": "Call centre technical associate",
+       "group": "",
+       "detail": "",
+       "weekly": 1415.1,
+       "hourly": 37.24
+      }
+     ]
+    }
+   ],
+   "penalties": [
+    [
+     [
+      "Column 1 Hours of overtime worked per day",
+      "Column 2 Overtime rate Full-time and part-time employees",
+      "Column 3 Overtime rate Casual employees"
+     ],
+     [
+      "",
+      "% of minimum hourly rate",
+      "% of minimum hourly rate"
+     ],
+     [
+      "Monday to Saturday—first 2 hours",
+      "150",
+      "175"
+     ],
+     [
+      "Monday to Saturday—after 2 hours",
+      "200",
+      "225"
+     ],
+     [
+      "Sunday—all day",
+      "200",
+      "225"
+     ],
+     [
+      "Public holiday—all day",
+      "250",
+      "275"
+     ]
+    ],
+    [
+     [
+      "Column 1 For all time worked:",
+      "Column 2 Overtime rate Full-time and part-time employees",
+      "Column 3 Overtime rate Casual employees"
+     ],
+     [
+      "",
+      "% of minimum hourly rate",
+      "% of minimum hourly rate"
+     ],
+     [
+      "In excess of the ordinary weekly hours fixed in clause 26.1",
+      "",
+      ""
+     ],
+     [
+      "first 3 hours",
+      "150",
+      "175"
+     ],
+     [
+      "after 3 hours",
+      "200",
+      "225"
+     ],
+     [
+      "In excess of ordinary daily hours on an ordinary shift",
+      "",
+      ""
+     ],
+     [
+      "first 2 hours",
+      "150",
+      "175"
+     ],
+     [
+      "after 2 hours",
+      "200",
+      "225"
+     ],
+     [
+      "Saturday, Sunday or public holiday that is not an ordinary working day",
+      "200",
+      "225"
+     ]
+    ]
+   ],
+   "source": "https://awards.fairwork.gov.au/MA000002.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000022",
+   "slug": "cleaning",
+   "short": "Cleaning",
+   "blurb": "Commercial cleaners working for cleaning contractors.",
+   "name": "Cleaning Services Award 2020",
+   "min_hourly": 27.08,
+   "tables": [
+    {
+     "caption": "Minimum rates",
+     "rows": [
+      {
+       "name": "Level 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1028.9,
+       "hourly": 27.08
+      },
+      {
+       "name": "Level 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1062.9,
+       "hourly": 27.97
+      },
+      {
+       "name": "Level 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      }
+     ]
+    }
+   ],
+   "penalties": [
+    [
+     [
+      "Column 1",
+      "Column 2 Overtime rate% of minimum hourly rate",
+      "Column 3 Overtime rate% of minimum hourly rate"
+     ],
+     [
+      "Overtime worked on",
+      "Full-time and part-time employees",
+      "Casual employees (includes casual loading)"
+     ],
+     [
+      "Monday to Saturday—first 2 hours",
+      "150",
+      "175"
+     ],
+     [
+      "Monday to Saturday—after 2 hours",
+      "200",
+      "225"
+     ],
+     [
+      "Sunday all day",
+      "200",
+      "225"
+     ],
+     [
+      "Public holiday all day",
+      "250",
+      "275"
+     ]
+    ],
+    [
+     [
+      "Column 1 Period or day",
+      "Column 2 Full-time employees",
+      "Column 3 Part-time employees",
+      "Column 4 Casual employees"
+     ],
+     [
+      "",
+      "% of minimum hourly rate",
+      "% of minimum hourly rate (inclusive of part-time allowance)",
+      "% of minimum hourly rate (inclusive of casual loading)"
+     ],
+     [
+      "Monday to Friday shift that starts before 6.00 am or finishes after 6.00 pm excluding a public holiday",
+      "115% for entire shift (other than overtime)",
+      "130% for entire shift (other than overtime)",
+      "140% for entire shift (other than overtime)"
+     ],
+     [
+      "Any shift that finishes after midnight but no later than 8.00 am and does not rotate or alternate with another shift or day work excluding hours on a day that is a public holiday",
+      "130% for all hours worked",
+      "130% for all hours worked",
+      "155% for all hours worked"
+     ],
+     [
+      "All hours from midnight Friday to midnight Saturday",
+      "150%",
+      "165%",
+      "175%"
+     ],
+     [
+      "All hours from midnight Saturday to midnight Sunday",
+      "200%",
+      "215%",
+      "225%"
+     ],
+     [
+      "All hours on a public holiday",
+      "250%",
+      "265%",
+      "275%"
+     ]
+    ]
+   ],
+   "source": "https://awards.fairwork.gov.au/MA000022.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000018",
+   "slug": "aged-care",
+   "short": "Aged care",
+   "blurb": "Residential aged care: personal care workers, cooks, cleaners, laundry and admin staff.",
+   "name": "Aged Care Award 2010",
+   "min_hourly": 27.77,
+   "tables": [
+    {
+     "caption": "B.1 , other than senior food services employees paid in accordance with clause 14.2",
+     "rows": [
+      {
+       "name": "Aged care employee—general—level 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1055.4,
+       "hourly": 27.77
+      },
+      {
+       "name": "Aged care employee—general—level 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1097.2,
+       "hourly": 28.87
+      },
+      {
+       "name": "Aged care employee—general—level 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1139.4,
+       "hourly": 29.98
+      },
+      {
+       "name": "Aged care employee—general—level 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1152.8,
+       "hourly": 30.34
+      },
+      {
+       "name": "Aged care employee—general—level 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1191.8,
+       "hourly": 31.36
+      },
+      {
+       "name": "Aged care employee—general—level 6",
+       "group": "",
+       "detail": "",
+       "weekly": 1256.0,
+       "hourly": 33.05
+      },
+      {
+       "name": "Aged care employee—general—level 7",
+       "group": "",
+       "detail": "",
+       "weekly": 1278.6,
+       "hourly": 33.65
+      }
+     ]
+    },
+    {
+     "caption": "The following minimum wages apply to an employee in the classifications Aged care employee—general—levels 4 to 7 listed in clause B.1 , if that employ",
+     "rows": [
+      {
+       "name": "Aged care employee—general—level 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1287.0,
+       "hourly": 33.87
+      },
+      {
+       "name": "Aged care employee—general—level 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1330.7,
+       "hourly": 35.02
+      },
+      {
+       "name": "Aged care employee—general—level 6",
+       "group": "",
+       "detail": "",
+       "weekly": 1402.5,
+       "hourly": 36.91
+      },
+      {
+       "name": "Aged care employee—general—level 7",
+       "group": "",
+       "detail": "",
+       "weekly": 1427.5,
+       "hourly": 37.57
+      }
+     ]
+    },
+    {
+     "caption": "The following minimum wages apply to employees in the classifications listed in clause B.2",
+     "rows": [
+      {
+       "name": "Aged care employee—direct care—level 1—Introductory",
+       "group": "",
+       "detail": "",
+       "weekly": 1239.0,
+       "hourly": 32.61
+      },
+      {
+       "name": "Aged care employee—direct care—level 2—Direct Carer",
+       "group": "",
+       "detail": "",
+       "weekly": 1307.8,
+       "hourly": 34.42
+      },
+      {
+       "name": "Aged care employee—direct care—level 3—Qualified",
+       "group": "",
+       "detail": "",
+       "weekly": 1376.7,
+       "hourly": 36.23
+      },
+      {
+       "name": "Aged care employee—direct care—level 4—Senior",
+       "group": "",
+       "detail": "",
+       "weekly": 1431.8,
+       "hourly": 37.68
+      },
+      {
+       "name": "Aged care employee—direct care—level 5—Specialist",
+       "group": "",
+       "detail": "",
+       "weekly": 1486.8,
+       "hourly": 39.13
+      },
+      {
+       "name": "Aged care employee—direct care—level 6—Team Leader",
+       "group": "",
+       "detail": "",
+       "weekly": 1541.9,
+       "hourly": 40.58
+      }
+     ]
+    }
+   ],
+   "penalties": [],
+   "source": "https://awards.fairwork.gov.au/MA000018.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000100",
+   "slug": "schads",
+   "short": "Social, community, home care and disability (SCHADS)",
+   "blurb": "Community services, disability support, home care and crisis accommodation workers.",
+   "name": "Social, Community, Home Care and Disability Services Industry Award 2010",
+   "min_hourly": 27.55,
+   "tables": [
+    {
+     "caption": "Social and community services employee level 1",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1046.9,
+       "hourly": 27.55
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1080.6,
+       "hourly": 28.44
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      }
+     ]
+    },
+    {
+     "caption": "Social and community services employee level 2",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1154.3,
+       "hourly": 30.38
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1189.4,
+       "hourly": 31.3
+      },
+      {
+       "name": "Pay point 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1221.1,
+       "hourly": 32.13
+      }
+     ]
+    },
+    {
+     "caption": "Social and community services employee level 3 Crisis accommodation employee level 1",
+     "rows": [
+      {
+       "name": "Pay point 1 (associate diploma/advanced certificate)",
+       "group": "",
+       "detail": "",
+       "weekly": 1221.1,
+       "hourly": 32.13
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1256.3,
+       "hourly": 33.06
+      },
+      {
+       "name": "Pay point 3 (3 year degree)",
+       "group": "",
+       "detail": "",
+       "weekly": 1283.1,
+       "hourly": 33.77
+      },
+      {
+       "name": "Pay point 4 (4 year degree)",
+       "group": "",
+       "detail": "",
+       "weekly": 1309.5,
+       "hourly": 34.46
+      }
+     ]
+    },
+    {
+     "caption": "Social and community services employee level 4 Crisis accommodation employee level 2",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1344.5,
+       "hourly": 35.38
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1379.6,
+       "hourly": 36.31
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1415.1,
+       "hourly": 37.24
+      },
+      {
+       "name": "Pay point 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1446.6,
+       "hourly": 38.07
+      }
+     ]
+    },
+    {
+     "caption": "Social and community services employee level 5 Crisis accommodation employee level 3",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1481.9,
+       "hourly": 39.0
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1513.8,
+       "hourly": 39.84
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1549.0,
+       "hourly": 40.76
+      }
+     ]
+    },
+    {
+     "caption": "Social and community services employee level 6 Crisis accommodation employee level 4",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1584.3,
+       "hourly": 41.69
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1619.3,
+       "hourly": 42.61
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1654.4,
+       "hourly": 43.54
+      }
+     ]
+    },
+    {
+     "caption": "Social and community services employee level 7",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1689.4,
+       "hourly": 44.46
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1724.9,
+       "hourly": 45.39
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1760.0,
+       "hourly": 46.32
+      }
+     ]
+    },
+    {
+     "caption": "Social and community services employee level 8",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1795.0,
+       "hourly": 47.24
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1830.3,
+       "hourly": 48.17
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1865.7,
+       "hourly": 49.1
+      }
+     ]
+    },
+    {
+     "caption": "Family day care employee level 1",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1048.1,
+       "hourly": 27.58
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1081.8,
+       "hourly": 28.47
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1121.0,
+       "hourly": 29.5
+      },
+      {
+       "name": "Pay point 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1158.6,
+       "hourly": 30.49
+      }
+     ]
+    },
+    {
+     "caption": "Family day care employee level 2",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1191.6,
+       "hourly": 31.36
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1230.5,
+       "hourly": 32.38
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1269.5,
+       "hourly": 33.41
+      },
+      {
+       "name": "Pay point 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1299.7,
+       "hourly": 34.2
+      }
+     ]
+    },
+    {
+     "caption": "Family day care employee level 3",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1332.7,
+       "hourly": 35.07
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1374.2,
+       "hourly": 36.16
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1416.5,
+       "hourly": 37.28
+      },
+      {
+       "name": "Pay point 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1455.5,
+       "hourly": 38.3
+      }
+     ]
+    },
+    {
+     "caption": "Family day care employee level 4",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1497.6,
+       "hourly": 39.41
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1513.4,
+       "hourly": 39.83
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1548.8,
+       "hourly": 40.76
+      },
+      {
+       "name": "Pay point 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1574.4,
+       "hourly": 41.43
+      }
+     ]
+    },
+    {
+     "caption": "Family day care employee level 5",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1687.1,
+       "hourly": 44.4
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1733.7,
+       "hourly": 45.62
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1780.9,
+       "hourly": 46.87
+      },
+      {
+       "name": "Pay point 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1827.6,
+       "hourly": 48.09
+      }
+     ]
+    },
+    {
+     "caption": "Home care employee level 2—disability care",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1261.1,
+       "hourly": 33.19
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1269.7,
+       "hourly": 33.41
+      }
+     ]
+    },
+    {
+     "caption": "Home care employee level 3—disability care",
+     "rows": [
+      {
+       "name": "Pay point 1 (certificate 3)",
+       "group": "",
+       "detail": "",
+       "weekly": 1287.0,
+       "hourly": 33.87
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1326.8,
+       "hourly": 34.92
+      }
+     ]
+    },
+    {
+     "caption": "Home care employee level 4—disability care",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1404.2,
+       "hourly": 36.95
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1431.7,
+       "hourly": 37.68
+      }
+     ]
+    },
+    {
+     "caption": "Home care employee level 5—disability care",
+     "rows": [
+      {
+       "name": "Pay point 1 (degree or diploma)",
+       "group": "",
+       "detail": "",
+       "weekly": 1505.6,
+       "hourly": 39.62
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1541.9,
+       "hourly": 40.58
+      }
+     ]
+    },
+    {
+     "caption": "Home care employees—aged care The following minimum wages apply to home care employees providing services to an aged person",
+     "rows": [
+      {
+       "name": "Home care employee level 1—aged care",
+       "group": "",
+       "detail": "",
+       "weekly": 1239.0,
+       "hourly": 32.61
+      },
+      {
+       "name": "Home care employee level 2—aged care",
+       "group": "",
+       "detail": "",
+       "weekly": 1307.8,
+       "hourly": 34.42
+      },
+      {
+       "name": "Home care employee level 3—aged care",
+       "group": "",
+       "detail": "",
+       "weekly": 1376.7,
+       "hourly": 36.23
+      },
+      {
+       "name": "Home care employee level 4—aged care",
+       "group": "",
+       "detail": "",
+       "weekly": 1431.7,
+       "hourly": 37.68
+      },
+      {
+       "name": "Home care employee level 5—aged care",
+       "group": "",
+       "detail": "",
+       "weekly": 1486.8,
+       "hourly": 39.13
+      },
+      {
+       "name": "Home care employee level 6—aged care",
+       "group": "",
+       "detail": "",
+       "weekly": 1541.9,
+       "hourly": 40.58
+      }
+     ]
+    }
+   ],
+   "penalties": [],
+   "source": "https://awards.fairwork.gov.au/MA000100.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000120",
+   "slug": "childcare",
+   "short": "Childcare",
+   "blurb": "Early childhood educators and staff in long day care, preschools and OSHC.",
+   "name": "Children's Services Award 2010",
+   "min_hourly": 26.44,
+   "tables": [
+    {
+     "caption": "An employer must pay the CSE minimum rate applicable to the employee’s classification, or the classification set out in clause 14.1(c) , as follows",
+     "rows": [
+      {
+       "name": "Level 1—Introductory Educator",
+       "group": "Children’s Services Employee",
+       "detail": "",
+       "weekly": 1094.8,
+       "hourly": 28.81
+      },
+      {
+       "name": "Level 2—Educator",
+       "group": "Children’s Services Employee",
+       "detail": "",
+       "weekly": 1128.4,
+       "hourly": 29.69
+      },
+      {
+       "name": "Level 3—Qualified Educator1",
+       "group": "Children’s Services Employee",
+       "detail": "",
+       "weekly": 1233.9,
+       "hourly": 32.47
+      },
+      {
+       "name": "Level 4—Experienced Educator",
+       "group": "Children’s Services Employee",
+       "detail": "",
+       "weekly": 1316.7,
+       "hourly": 34.65
+      },
+      {
+       "name": "Level 5—Advanced Educator",
+       "group": "Children’s Services Employee",
+       "detail": "",
+       "weekly": 1389.5,
+       "hourly": 36.57
+      },
+      {
+       "name": "Level 6—Room Leader2",
+       "group": "Children’s Services Employee",
+       "detail": "",
+       "weekly": 1453.5,
+       "hourly": 38.25
+      },
+      {
+       "name": "Level 7—Assistant Director",
+       "group": "Children’s Services Employee",
+       "detail": "",
+       "weekly": 1519.9,
+       "hourly": 40.0
+      },
+      {
+       "name": "Level 8—Director1",
+       "group": "Children’s Services Employee",
+       "detail": "",
+       "weekly": 1752.7,
+       "hourly": 46.12
+      }
+     ]
+    },
+    {
+     "caption": "and who meet the criteria in clause 14.1(a)(ii)",
+     "rows": [
+      {
+       "name": "Level 1.1",
+       "group": "",
+       "detail": "On commencement",
+       "weekly": 1004.9,
+       "hourly": 26.44
+      },
+      {
+       "name": "Level 2.1",
+       "group": "",
+       "detail": "On commencement",
+       "weekly": 1023.4,
+       "hourly": 26.93
+      },
+      {
+       "name": "Level 2.2",
+       "group": "",
+       "detail": "After 1 year1",
+       "weekly": 1057.0,
+       "hourly": 27.82
+      },
+      {
+       "name": "Level 3.1",
+       "group": "",
+       "detail": "On commencement",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      }
+     ]
+    }
+   ],
+   "penalties": [],
+   "source": "https://awards.fairwork.gov.au/MA000120.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000034",
+   "slug": "nurses",
+   "short": "Nurses",
+   "blurb": "Registered nurses, enrolled nurses and nursing assistants.",
+   "name": "Nurses Award 2020",
+   "min_hourly": 25.69,
+   "tables": [
+    {
+     "caption": "",
+     "rows": [
+      {
+       "name": "1st year",
+       "group": "",
+       "detail": "",
+       "weekly": 1050.7,
+       "hourly": 27.65
+      },
+      {
+       "name": "2nd year",
+       "group": "",
+       "detail": "",
+       "weekly": 1067.3,
+       "hourly": 28.09
+      },
+      {
+       "name": "3rd year and thereafter",
+       "group": "",
+       "detail": "",
+       "weekly": 1084.4,
+       "hourly": 28.54
+      },
+      {
+       "name": "Experienced (the holder of a relevant certificate III qualification)",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      }
+     ]
+    },
+    {
+     "caption": "",
+     "rows": [
+      {
+       "name": "Less than 21 years of age",
+       "group": "",
+       "detail": "",
+       "weekly": 976.2,
+       "hourly": 25.69
+      },
+      {
+       "name": "21 years of age and over",
+       "group": "",
+       "detail": "",
+       "weekly": 1024.7,
+       "hourly": 26.97
+      }
+     ]
+    },
+    {
+     "caption": "",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1139.9,
+       "hourly": 30.0
+      },
+      {
+       "name": "Pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1155.0,
+       "hourly": 30.39
+      },
+      {
+       "name": "Pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1170.4,
+       "hourly": 30.8
+      },
+      {
+       "name": "Pay point 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1187.2,
+       "hourly": 31.24
+      },
+      {
+       "name": "Pay point 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1199.2,
+       "hourly": 31.56
+      }
+     ]
+    },
+    {
+     "caption": "",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "Registered nurse—level 1",
+       "detail": "",
+       "weekly": 1219.5,
+       "hourly": 32.09
+      },
+      {
+       "name": "Pay point 2",
+       "group": "Registered nurse—level 1",
+       "detail": "",
+       "weekly": 1244.5,
+       "hourly": 32.75
+      },
+      {
+       "name": "Pay point 3",
+       "group": "Registered nurse—level 1",
+       "detail": "",
+       "weekly": 1275.0,
+       "hourly": 33.55
+      },
+      {
+       "name": "Pay point 4",
+       "group": "Registered nurse—level 1",
+       "detail": "",
+       "weekly": 1309.0,
+       "hourly": 34.45
+      },
+      {
+       "name": "Pay point 5",
+       "group": "Registered nurse—level 1",
+       "detail": "",
+       "weekly": 1349.2,
+       "hourly": 35.51
+      },
+      {
+       "name": "Pay point 6",
+       "group": "Registered nurse—level 1",
+       "detail": "",
+       "weekly": 1388.1,
+       "hourly": 36.53
+      },
+      {
+       "name": "Pay point 7",
+       "group": "Registered nurse—level 1",
+       "detail": "",
+       "weekly": 1428.3,
+       "hourly": 37.59
+      },
+      {
+       "name": "Pay point 8 and thereafter",
+       "group": "Registered nurse—level 1",
+       "detail": "",
+       "weekly": 1465.5,
+       "hourly": 38.57
+      },
+      {
+       "name": "Pay point 1",
+       "group": "Registered nurse—level 2",
+       "detail": "",
+       "weekly": 1504.4,
+       "hourly": 39.59
+      },
+      {
+       "name": "Pay point 2",
+       "group": "Registered nurse—level 2",
+       "detail": "",
+       "weekly": 1528.3,
+       "hourly": 40.22
+      },
+      {
+       "name": "Pay point 3",
+       "group": "Registered nurse—level 2",
+       "detail": "",
+       "weekly": 1554.8,
+       "hourly": 40.92
+      },
+      {
+       "name": "Pay point 4 and thereafter",
+       "group": "Registered nurse—level 2",
+       "detail": "",
+       "weekly": 1580.3,
+       "hourly": 41.59
+      },
+      {
+       "name": "Pay point 1",
+       "group": "Registered nurse—level 3",
+       "detail": "",
+       "weekly": 1631.2,
+       "hourly": 42.93
+      },
+      {
+       "name": "Pay point 2",
+       "group": "Registered nurse—level 3",
+       "detail": "",
+       "weekly": 1661.1,
+       "hourly": 43.71
+      },
+      {
+       "name": "Pay point 3",
+       "group": "Registered nurse—level 3",
+       "detail": "",
+       "weekly": 1689.8,
+       "hourly": 44.47
+      },
+      {
+       "name": "Pay point 4 and thereafter",
+       "group": "Registered nurse—level 3",
+       "detail": "",
+       "weekly": 1720.1,
+       "hourly": 45.27
+      },
+      {
+       "name": "Grade 1",
+       "group": "Registered nurse—level 4",
+       "detail": "",
+       "weekly": 1861.7,
+       "hourly": 48.99
+      },
+      {
+       "name": "Grade 2",
+       "group": "Registered nurse—level 4",
+       "detail": "",
+       "weekly": 1995.1,
+       "hourly": 52.5
+      },
+      {
+       "name": "Grade 3",
+       "group": "Registered nurse—level 4",
+       "detail": "",
+       "weekly": 2111.6,
+       "hourly": 55.57
+      },
+      {
+       "name": "Grade 1",
+       "group": "Registered nurse—level 5",
+       "detail": "",
+       "weekly": 1878.6,
+       "hourly": 49.44
+      },
+      {
+       "name": "Grade 2",
+       "group": "Registered nurse—level 5",
+       "detail": "",
+       "weekly": 1978.4,
+       "hourly": 52.06
+      },
+      {
+       "name": "Grade 3",
+       "group": "Registered nurse—level 5",
+       "detail": "",
+       "weekly": 2111.6,
+       "hourly": 55.57
+      },
+      {
+       "name": "Grade 4",
+       "group": "Registered nurse—level 5",
+       "detail": "",
+       "weekly": 2243.1,
+       "hourly": 59.03
+      },
+      {
+       "name": "Grade 5",
+       "group": "Registered nurse—level 5",
+       "detail": "",
+       "weekly": 2474.1,
+       "hourly": 65.11
+      },
+      {
+       "name": "Grade 6",
+       "group": "Registered nurse—level 5",
+       "detail": "",
+       "weekly": 2706.9,
+       "hourly": 71.23
+      }
+     ]
+    },
+    {
+     "caption": "",
+     "rows": [
+      {
+       "name": "4 year degree1",
+       "group": "",
+       "detail": "",
+       "weekly": 1273.4,
+       "hourly": 33.51
+      },
+      {
+       "name": "Masters degree1",
+       "group": "",
+       "detail": "",
+       "weekly": 1317.2,
+       "hourly": 34.66
+      }
+     ]
+    },
+    {
+     "caption": "",
+     "rows": [
+      {
+       "name": "1st year",
+       "group": "",
+       "detail": "",
+       "weekly": 1877.0,
+       "hourly": 49.39
+      },
+      {
+       "name": "2nd year",
+       "group": "",
+       "detail": "",
+       "weekly": 1932.7,
+       "hourly": 50.86
+      }
+     ]
+    },
+    {
+     "caption": "",
+     "rows": [
+      {
+       "name": "Pay point 1",
+       "group": "Occupational health nurse—level 1",
+       "detail": "",
+       "weekly": 1309.0,
+       "hourly": 34.45
+      },
+      {
+       "name": "Pay point 2",
+       "group": "Occupational health nurse—level 1",
+       "detail": "",
+       "weekly": 1349.2,
+       "hourly": 35.51
+      },
+      {
+       "name": "Pay point 3",
+       "group": "Occupational health nurse—level 1",
+       "detail": "",
+       "weekly": 1388.1,
+       "hourly": 36.53
+      },
+      {
+       "name": "Pay point 4",
+       "group": "Occupational health nurse—level 1",
+       "detail": "",
+       "weekly": 1428.3,
+       "hourly": 37.59
+      },
+      {
+       "name": "Pay point 5",
+       "group": "Occupational health nurse—level 1",
+       "detail": "",
+       "weekly": 1465.5,
+       "hourly": 38.57
+      },
+      {
+       "name": "Pay point 1",
+       "group": "Occupational health nurse—level 2",
+       "detail": "",
+       "weekly": 1504.4,
+       "hourly": 39.59
+      },
+      {
+       "name": "Pay point 2",
+       "group": "Occupational health nurse—level 2",
+       "detail": "",
+       "weekly": 1528.3,
+       "hourly": 40.22
+      },
+      {
+       "name": "Pay point 3",
+       "group": "Occupational health nurse—level 2",
+       "detail": "",
+       "weekly": 1554.8,
+       "hourly": 40.92
+      },
+      {
+       "name": "Pay point 4",
+       "group": "Occupational health nurse—level 2",
+       "detail": "",
+       "weekly": 1580.3,
+       "hourly": 41.59
+      },
+      {
+       "name": "Senior occupational health clinical nurse",
+       "group": "Occupational health nurse—level 2",
+       "detail": "",
+       "weekly": 1580.3,
+       "hourly": 41.59
+      },
+      {
+       "name": "Pay point 1",
+       "group": "Occupational health nurse—level 3",
+       "detail": "",
+       "weekly": 1631.2,
+       "hourly": 42.93
+      },
+      {
+       "name": "Pay point 2",
+       "group": "Occupational health nurse—level 3",
+       "detail": "",
+       "weekly": 1661.1,
+       "hourly": 43.71
+      },
+      {
+       "name": "Pay point 3",
+       "group": "Occupational health nurse—level 3",
+       "detail": "",
+       "weekly": 1689.8,
+       "hourly": 44.47
+      },
+      {
+       "name": "Pay point 4 and thereafter",
+       "group": "Occupational health nurse—level 3",
+       "detail": "",
+       "weekly": 1720.1,
+       "hourly": 45.27
+      }
+     ]
+    },
+    {
+     "caption": "Enrolled Nurses—aged care employees (i) Student enrolled nurse",
+     "rows": [
+      {
+       "name": "Less than 21 years of age",
+       "group": "",
+       "detail": "",
+       "weekly": 1122.6,
+       "hourly": 29.54
+      },
+      {
+       "name": "21 years of age and over",
+       "group": "",
+       "detail": "",
+       "weekly": 1178.3,
+       "hourly": 31.01
+      }
+     ]
+    },
+    {
+     "caption": "Registered nurses—aged care employees",
+     "rows": [
+      {
+       "name": "First year of employment classified at this level",
+       "group": "Registered nurse—level 1",
+       "detail": "",
+       "weekly": 1571.6,
+       "hourly": 41.36
+      },
+      {
+       "name": "In excess of 1 year and up to 4 years of employment classified at this level",
+       "group": "Registered nurse—level 1",
+       "detail": "",
+       "weekly": 1654.3,
+       "hourly": 43.53
+      },
+      {
+       "name": "In excess of 4 years of employment classified at this level",
+       "group": "Registered nurse—level 1",
+       "detail": "",
+       "weekly": 1801.1,
+       "hourly": 47.4
+      },
+      {
+       "name": "First 3 years of employment classified at this level",
+       "group": "Registered nurse—level 2",
+       "detail": "",
+       "weekly": 1947.7,
+       "hourly": 51.26
+      },
+      {
+       "name": "In excess of 3 years of employment classified at this level",
+       "group": "Registered nurse—level 2",
+       "detail": "",
+       "weekly": 2046.0,
+       "hourly": 53.84
+      },
+      {
+       "name": "Registered nurse—level 3",
+       "group": "Registered nurse—level 2",
+       "detail": "",
+       "weekly": 2094.2,
+       "hourly": 55.11
+      },
+      {
+       "name": "Registered nurse—level 4",
+       "group": "Registered nurse—level 2",
+       "detail": "",
+       "weekly": 2390.3,
+       "hourly": 62.9
+      },
+      {
+       "name": "Registered nurse—level 5",
+       "group": "Registered nurse—level 2",
+       "detail": "",
+       "weekly": 2711.3,
+       "hourly": 71.35
+      }
+     ]
+    },
+    {
+     "caption": "Nurse practitioner—aged care employees",
+     "rows": [
+      {
+       "name": "1st year",
+       "group": "",
+       "detail": "",
+       "weekly": 2158.6,
+       "hourly": 56.81
+      },
+      {
+       "name": "2nd year",
+       "group": "",
+       "detail": "",
+       "weekly": 2222.7,
+       "hourly": 58.49
+      }
+     ]
+    }
+   ],
+   "penalties": [],
+   "source": "https://awards.fairwork.gov.au/MA000034.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000027",
+   "slug": "health-professionals",
+   "short": "Health professionals and support",
+   "blurb": "Allied health, dental assistants, pathology collectors and health support staff.",
+   "name": "Health Professionals and Support Services Award 2020",
+   "min_hourly": 26.97,
+   "tables": [
+    {
+     "caption": "Employees other than dental assistants and pathology collectors Clause 16.2(a) specifies the minimum rate of pay applicable to all Support Services em",
+     "rows": [
+      {
+       "name": "Level 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1024.7,
+       "hourly": 26.97
+      },
+      {
+       "name": "Level 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1065.2,
+       "hourly": 28.03
+      },
+      {
+       "name": "Level 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1106.2,
+       "hourly": 29.11
+      },
+      {
+       "name": "Level 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Level 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1157.2,
+       "hourly": 30.45
+      },
+      {
+       "name": "Level 6",
+       "group": "",
+       "detail": "",
+       "weekly": 1219.5,
+       "hourly": 32.09
+      },
+      {
+       "name": "Level 7",
+       "group": "",
+       "detail": "",
+       "weekly": 1241.4,
+       "hourly": 32.67
+      },
+      {
+       "name": "Level 8—pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1283.5,
+       "hourly": 33.78
+      },
+      {
+       "name": "Level 8—pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1317.2,
+       "hourly": 34.66
+      },
+      {
+       "name": "Level 8—pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1409.7,
+       "hourly": 37.1
+      },
+      {
+       "name": "Level 9—pay point 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1435.0,
+       "hourly": 37.76
+      },
+      {
+       "name": "Level 9—pay point 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1485.9,
+       "hourly": 39.1
+      },
+      {
+       "name": "Level 9—pay point 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1497.8,
+       "hourly": 39.42
+      }
+     ]
+    },
+    {
+     "caption": "Dental assistants—until 31 December 2026 Dental assistants classified at Levels 3, 5, 6 and 7 in clause A.1 will be paid the following minimum rates",
+     "rows": [
+      {
+       "name": "Level 3 (unqualified with less than 12 months industry experience as a dental assistant)",
+       "group": "",
+       "detail": "",
+       "weekly": 1106.2,
+       "hourly": 29.11
+      },
+      {
+       "name": "Level 5 (unqualified with 12 months’ to up to 4 years’ industry experience as a dental assistant)",
+       "group": "",
+       "detail": "",
+       "weekly": 1107.8,
+       "hourly": 29.15
+      },
+      {
+       "name": "Level 6  Certificate III or equivalent qualification; or  unqualified with 4 years’ or more industry experience as a dental assistant; or  unqualified with equivalent experience to a Certificate III qualification as assessed by the employer",
+       "group": "",
+       "detail": "",
+       "weekly": 1163.9,
+       "hourly": 30.63
+      },
+      {
+       "name": "Level 7  Certificate IV or equivalent qualification; or  equivalent experience to a Certificate IV qualification as assessed by the employer",
+       "group": "",
+       "detail": "",
+       "weekly": 1203.5,
+       "hourly": 31.67
+      }
+     ]
+    },
+    {
+     "caption": "Pathology collectors classified at Level 7 in clause A.1 will be paid the minimum rates for either Level 7 (unqualified and not previously Level 6) or",
+     "rows": [
+      {
+       "name": "Level 5 Entry Level Unqualified with less than 12 months’ industry experience as a pathology collector",
+       "group": "",
+       "detail": "",
+       "weekly": 1157.2,
+       "hourly": 30.45
+      },
+      {
+       "name": "Level 6 Qualified  Certificate III in pathology collection with less than 12 months’ industry experience as a pathology collector; or  unqualified with 12 months to up to 2 years’ industry experience as a pathology collector",
+       "group": "",
+       "detail": "",
+       "weekly": 1163.9,
+       "hourly": 30.63
+      },
+      {
+       "name": "Level 7 (unqualified and not previously Level 6) Experienced Unqualified with 2 years’ or more industry experience as a pathology collector and was not classified under this award on 31 March 2026 as a Support Services employee—Level 6",
+       "group": "",
+       "detail": "",
+       "weekly": 1203.5,
+       "hourly": 31.67
+      },
+      {
+       "name": "Level 7 (qualified or previously Level 6)  Experienced Certificate III in pathology collection with 12 months’ or more industry experience as a pathology collector; or  classified under this award on 31 March 2026 as a Support Services employee—Level 6.",
+       "group": "",
+       "detail": "",
+       "weekly": 1241.4,
+       "hourly": 32.67
+      }
+     ]
+    }
+   ],
+   "penalties": [],
+   "source": "https://awards.fairwork.gov.au/MA000027.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000016",
+   "slug": "security",
+   "short": "Security",
+   "blurb": "Security officers, crowd controllers and patrol staff.",
+   "name": "Security Services Industry Award 2020",
+   "min_hourly": 28.42,
+   "tables": [
+    {
+     "caption": "Minimum rates",
+     "rows": [
+      {
+       "name": "Security Officer Level 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1080.1,
+       "hourly": 28.42
+      },
+      {
+       "name": "Security Officer Level 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1111.0,
+       "hourly": 29.24
+      },
+      {
+       "name": "Security Officer Level 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1129.8,
+       "hourly": 29.73
+      },
+      {
+       "name": "Security Officer Level 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1148.7,
+       "hourly": 30.23
+      },
+      {
+       "name": "Security Officer Level 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1185.7,
+       "hourly": 31.2
+      }
+     ]
+    }
+   ],
+   "penalties": [
+    [
+     [
+      "Column 1 For overtime worked on",
+      "Column 2 Overtime rate(% of minimum hourly rate)"
+     ],
+     [
+      "Monday to Saturday—first 2 hours",
+      "150%"
+     ],
+     [
+      "Monday to Saturday—after 2 hours",
+      "200%"
+     ],
+     [
+      "Sunday—all day",
+      "200%"
+     ],
+     [
+      "Public holiday—all day",
+      "250%"
+     ]
+    ],
+    [
+     [
+      "Column 1 Period or day",
+      "Column 2 Full-time and part-time employees % of minimum hourly rate",
+      "Column 3 Casual employees % of minimum hourly rate (inclusive of casual loading)"
+     ],
+     [
+      "6.00 am to 6.00 pm Monday to Friday excluding a public holiday",
+      "100%",
+      "125%"
+     ],
+     [
+      "Midnight to 6.00 am and 6.00 pm to midnight –Monday to Friday excluding hours on a day that is a public holiday",
+      "121.7% or, for an employee on permanent night work, 130%",
+      "146.7% or, for an employee on permanent night work, 155%"
+     ],
+     [
+      "Saturday",
+      "150%",
+      "175%"
+     ],
+     [
+      "Sunday",
+      "200%",
+      "225%"
+     ],
+     [
+      "Public holiday",
+      "250%",
+      "275%"
+     ]
+    ]
+   ],
+   "source": "https://awards.fairwork.gov.au/MA000016.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000028",
+   "slug": "horticulture",
+   "short": "Farm work (horticulture)",
+   "blurb": "Fruit, vegetable, flower and nursery farm work, including picking and packing.",
+   "name": "Horticulture Award 2020",
+   "min_hourly": 25.74,
+   "tables": [
+    {
+     "caption": "Adult employee minimum rates (a) The classifications and minimum rates for an adult employee are set out in the following table",
+     "rows": [
+      {
+       "name": "Level 1",
+       "group": "",
+       "detail": "",
+       "weekly": 978.1,
+       "hourly": 25.74
+      },
+      {
+       "name": "Level 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1004.9,
+       "hourly": 26.44
+      },
+      {
+       "name": "Level 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1020.1,
+       "hourly": 26.84
+      },
+      {
+       "name": "Level 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1056.9,
+       "hourly": 27.81
+      },
+      {
+       "name": "Level 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      }
+     ]
+    }
+   ],
+   "penalties": [],
+   "source": "https://awards.fairwork.gov.au/MA000028.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000010",
+   "slug": "manufacturing",
+   "short": "Manufacturing",
+   "blurb": "Factory, production, engineering and process workers.",
+   "name": "Manufacturing and Associated Industries and Occupations Award 2020",
+   "min_hourly": 25.74,
+   "tables": [
+    {
+     "caption": "Schedule B —Vehicle Manufacturing Employees—Skill Level Definitions—Trades, Non-trades, Post-trades, Drivers, Technicians/ Technical Officers and Supe",
+     "rows": [
+      {
+       "name": "C14 / V1",
+       "group": "",
+       "detail": "",
+       "weekly": 978.1,
+       "hourly": 25.74
+      },
+      {
+       "name": "C13 / V2",
+       "group": "",
+       "detail": "",
+       "weekly": 1004.9,
+       "hourly": 26.44
+      },
+      {
+       "name": "C12 / V3",
+       "group": "",
+       "detail": "",
+       "weekly": 1029.1,
+       "hourly": 27.08
+      },
+      {
+       "name": "C11 / V4",
+       "group": "",
+       "detail": "",
+       "weekly": 1062.9,
+       "hourly": 27.97
+      },
+      {
+       "name": "C10 / V5",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "C9 / V6",
+       "group": "",
+       "detail": "",
+       "weekly": 1154.3,
+       "hourly": 30.38
+      },
+      {
+       "name": "C8 / V7",
+       "group": "",
+       "detail": "",
+       "weekly": 1189.4,
+       "hourly": 31.3
+      },
+      {
+       "name": "C7",
+       "group": "",
+       "detail": "",
+       "weekly": 1221.1,
+       "hourly": 32.13
+      },
+      {
+       "name": "V8",
+       "group": "",
+       "detail": "",
+       "weekly": 1224.4,
+       "hourly": 32.22
+      },
+      {
+       "name": "C6 / V9",
+       "group": "",
+       "detail": "",
+       "weekly": 1283.1,
+       "hourly": 33.77
+      },
+      {
+       "name": "C5 / V10",
+       "group": "",
+       "detail": "",
+       "weekly": 1309.5,
+       "hourly": 34.46
+      },
+      {
+       "name": "C4 / V11",
+       "group": "",
+       "detail": "",
+       "weekly": 1344.5,
+       "hourly": 35.38
+      },
+      {
+       "name": "C3 / V12",
+       "group": "",
+       "detail": "",
+       "weekly": 1415.0,
+       "hourly": 37.24
+      },
+      {
+       "name": "C2(a) / V13",
+       "group": "",
+       "detail": "",
+       "weekly": 1450.2,
+       "hourly": 38.16
+      },
+      {
+       "name": "C2(b) / V14",
+       "group": "",
+       "detail": "",
+       "weekly": 1513.7,
+       "hourly": 39.83
+      },
+      {
+       "name": "D1",
+       "group": "Driver classifications",
+       "detail": "",
+       "weekly": 1076.6,
+       "hourly": 28.33
+      },
+      {
+       "name": "D2",
+       "group": "Driver classifications",
+       "detail": "",
+       "weekly": 1089.6,
+       "hourly": 28.67
+      },
+      {
+       "name": "D3",
+       "group": "Driver classifications",
+       "detail": "",
+       "weekly": 1102.6,
+       "hourly": 29.02
+      },
+      {
+       "name": "D4",
+       "group": "Driver classifications",
+       "detail": "",
+       "weekly": 1118.0,
+       "hourly": 29.42
+      }
+     ]
+    }
+   ],
+   "penalties": [
+    [
+     [
+      "Working hours",
+      "% of ordinary hourly rate/casual ordinary hourly rate/minimum hourly rate/casual minimum hourly rate"
+     ],
+     [
+      "Employees other than afternoon and night shiftworkers",
+      ""
+     ],
+     [
+      "Ordinary hours",
+      "100%"
+     ],
+     [
+      "Ordinary hours on a Saturday (clauses 17.2(g)(i) and 33.1(a)(i))",
+      "150%"
+     ],
+     [
+      "Ordinary hours on a Sunday (clauses 17.2(g)(ii) and 33.1(a)(ii))",
+      "200%"
+     ],
+     [
+      "Work on a public holiday (clauses 17.2(h) and 33.1(b))",
+      "250%"
+     ],
+     [
+      "Overtime on a public holiday (clause 32.7(a))",
+      "250%"
+     ],
+     [
+      "Overtime – first 3 hours per day Monday to Saturday (clause 32.2(a))",
+      "150%"
+     ],
+     [
+      "Overtime –after 3 hours per day Monday to Saturday (clause 32.2(b))",
+      "200%"
+     ],
+     [
+      "Overtime on a Sunday (clause 32.6)",
+      "200%"
+     ],
+     [
+      "Shiftworkers other than those engaged in vehicle manufacturing covered by clause 4.8(a)(xi)",
+      ""
+     ],
+     [
+      "Shiftworker – afternoon and night shift (clause 33.2(d))",
+      "115%"
+     ],
+     [
+      "Shiftworker – permanent night shift (clause 33.2(f)(iii))",
+      "130%"
+     ],
+     [
+      "Employed on continuous shift work – on a shift other than a rostered shift (clause 33.2(g)(ii))",
+      "200%"
+     ],
+     [
+      "Employed on other than continuous shift work – Work on shift other than rostered shift - first 3 hours (clause 33.2(g)(ii))",
+      "150%"
+     ],
+     [
+      "Employed on other than continuous shift work – Work on shift other than rostered shift - after 3 hours (clause 33.2(g)(ii))",
+      "200%"
+     ],
+     [
+      "Shiftworker – ordinary hours on a Saturday (clause 33.2(i)(i))",
+      "150%"
+     ],
+     [
+      "Shiftworker – ordinary hours on a Sunday (clause 33.2(j)(ii))",
+      "200%"
+     ],
+     [
+      "Continuous shiftworker – ordinary hours on a public holiday (clause 33.2(j)(i))",
+      "200%"
+     ],
+     [
+      "Afternoon or night shift – non-successive shifts – first 3 hours (clause 33.2(e))",
+      "150%"
+     ],
+     [
+      "Afternoon or night shift – non-successive shifts – after 3 hours (clause 33.2(e))",
+      "200%"
+     ],
+     [
+      "Other than continuous shiftworker – ordinary hours on public holiday (clause 32.7(c))",
+      "250%"
+     ],
+     [
+      "Full-time and part-time shiftworkers other than those engaged in vehicle manufacturing covered by clause 4.8(a)(xi).",
+      ""
+     ],
+     [
+      "Continuous shiftworker – overtime on a public holiday (clause 32.7(b))",
+      "200%"
+     ],
+     [
+      "Continuous shiftworker – overtime (clause 32.4)",
+      "200%"
+     ],
+     [
+      "Other than continuous shiftworker – overtime – first 3 hours Monday to Saturday (clause 32.2(a))",
+      "150%"
+     ],
+     [
+      "Other than continuous shiftworker – overtime – after 3 hours Monday to Saturday (clause 32.2(b))",
+      "200%"
+     ],
+     [
+      "Other than continuous shiftworker – overtime – Sunday (clause 32.6)",
+      "200%"
+     ],
+     [
+      "Other than continuous shiftworker – overtime on a public holiday (clause 32.7(c))",
+      "250%"
+     ],
+     [
+      "Shiftworkers engaged in vehicle manufacturing covered by clause 4.8(a)(xi).",
+      ""
+     ],
+     [
+      "Continuous shiftworker – overtime – first 3 hours (clause 32.4(b)(i))",
+      "150%"
+     ],
+     [
+      "Continuous shiftworker – overtime – after 3 hours (clause 32.4(b)(ii))",
+      "200%"
+     ],
+     [
+      "Other than continuous work shift – afternoon and night shift which does not continue for 5 successive afternoons or nights (clause 56.1(b)(ii))",
+      "150%"
+     ],
+     [
+      "Other than continuous work shift – night shift only (clause 56.1(b)(ii))",
+      "130%"
+     ],
+     [
+      "Other than continuous work shift – alternating night and afternoon shifts (clause 56.1(b)(ii))",
+      "118%"
+     ],
+     [
+      "Other than continuous work shift – alternating day and night shifts—rate for the night shift (clause 56.1(b)(ii))",
+      "112.5%"
+     ],
+     [
+      "Other than continuous work shift – afternoon shift only (clause 56.1(b)(ii))",
+      "118%"
+     ],
+     [
+      "Other than continuous work shift – alternating day and afternoon shifts—rate for the afternoon shift (clause 56.1(b)(ii))",
+      "112.5%"
+     ],
+     [
+      "Other than continuous work shift – alternating day, afternoon and night shifts—rate for the afternoon and night shift (clause 56.1(b)(ii))",
+      "112.5%"
+     ],
+     [
+      "Continuous afternoon or night shift (clause 56.1(d))",
+      "112.5%"
+     ],
+     [
+      "Saturday (clause 56.1(e))",
+      "125%"
+     ],
+     [
+      "Sunday shifts (clause 56.2)",
+      "200%"
+     ],
+     [
+      "Public holiday shifts (clause 56.3)",
+      "250%"
+     ]
+    ],
+    [
+     [
+      "Circumstances",
+      "% of ordinary hourly rate/minimum casual ordinary hourly rate"
+     ],
+     [
+      "Working through meal breaks on a Saturday or Sunday (clause 18.5(b)(ii))",
+      "200%"
+     ],
+     [
+      "Working through meal break on a shift where employees are entitled to a 15% loading (clause 18.5(b)(iii))",
+      "165%"
+     ],
+     [
+      "Working through meal break on a shift where employees are entitled to a 30% loading (clause 18.5(b)(iv))",
+      "180%"
+     ],
+     [
+      "Working through meal break in all other circumstances (clause 18.5(b)(i))",
+      "150%"
+     ],
+     [
+      "Ship Trials (clause 19.4)",
+      "125 or 150%"
+     ],
+     [
+      "Travelling time payment Sunday or public holiday (clause 30.5(e)(i)).",
+      "150%"
+     ],
+     [
+      "Unrelieved shiftworker for work on RDO (clause 32.3)",
+      "200%"
+     ],
+     [
+      "Rest period after overtime (clause 32.12(d))",
+      "200%"
+     ],
+     [
+      "Call back other than shiftworker (clause 32.13(b)(i))",
+      "150% for first 3 hours 200% thereafter"
+     ],
+     [
+      "Call back continuous shiftworker (clause 32.13(b)(ii))",
+      "200%"
+     ]
+    ]
+   ],
+   "source": "https://awards.fairwork.gov.au/MA000010.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000020",
+   "slug": "construction",
+   "short": "Building and construction",
+   "blurb": "On-site construction labourers, tradespeople and plant operators.",
+   "name": "Building and Construction General On-site Award 2020",
+   "min_hourly": 26.67,
+   "tables": [
+    {
+     "caption": "Classification Definitions , in which the employee is working",
+     "rows": [
+      {
+       "name": "Level 9 (ECW 9)",
+       "group": "",
+       "detail": "",
+       "weekly": 1309.5,
+       "hourly": 34.46
+      },
+      {
+       "name": "Level 8 (CW/ECW 8)",
+       "group": "",
+       "detail": "",
+       "weekly": 1286.7,
+       "hourly": 33.86
+      },
+      {
+       "name": "Level 7 (CW/ECW 7)",
+       "group": "",
+       "detail": "",
+       "weekly": 1256.3,
+       "hourly": 33.06
+      },
+      {
+       "name": "Level 6 (CW/ECW 6)",
+       "group": "",
+       "detail": "",
+       "weekly": 1221.3,
+       "hourly": 32.14
+      },
+      {
+       "name": "Level 5 (CW/ECW 5)",
+       "group": "",
+       "detail": "",
+       "weekly": 1189.6,
+       "hourly": 31.31
+      },
+      {
+       "name": "Level 4 (CW/ECW 4)",
+       "group": "",
+       "detail": "",
+       "weekly": 1154.4,
+       "hourly": 30.38
+      },
+      {
+       "name": "Level 3 (CW/ECW 3)",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Level 2 (CW/ECW 2)",
+       "group": "",
+       "detail": "",
+       "weekly": 1087.5,
+       "hourly": 28.62
+      },
+      {
+       "name": "Level 1 (CW/ECW 1)—CW/ECW 1 (level d)",
+       "group": "",
+       "detail": "",
+       "weekly": 1066.0,
+       "hourly": 28.05
+      },
+      {
+       "name": "Level 1 (CW/ECW 1)—CW/ECW 1 (level c)",
+       "group": "",
+       "detail": "",
+       "weekly": 1047.3,
+       "hourly": 27.56
+      },
+      {
+       "name": "Level 1 (CW/ECW 1)—CW/ECW 1 (level b)",
+       "group": "",
+       "detail": "",
+       "weekly": 1033.5,
+       "hourly": 27.2
+      },
+      {
+       "name": "Level 1 (CW/ECW 1)—CW/ECW1 (level a)",
+       "group": "",
+       "detail": "",
+       "weekly": 1013.5,
+       "hourly": 26.67
+      }
+     ]
+    }
+   ],
+   "penalties": [],
+   "source": "https://awards.fairwork.gov.au/MA000020.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000025",
+   "slug": "electrical",
+   "short": "Electrical contracting",
+   "blurb": "Electricians, electrical apprentices and communications workers.",
+   "name": "Electrical, Electronic and Communications Contracting Award 2020",
+   "min_hourly": 26.44,
+   "tables": [
+    {
+     "caption": "The classifications and minimum rates for an employee, other than an apprentice, are set out in the following table",
+     "rows": [
+      {
+       "name": "Electrical worker grade 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1004.9,
+       "hourly": 26.44
+      },
+      {
+       "name": "Electrical worker grade 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1013.1,
+       "hourly": 26.66
+      },
+      {
+       "name": "Electrical worker grade 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1046.9,
+       "hourly": 27.55
+      },
+      {
+       "name": "Electrical worker grade 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1080.6,
+       "hourly": 28.44
+      },
+      {
+       "name": "Electrical worker grade 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Electrical worker grade 6",
+       "group": "",
+       "detail": "",
+       "weekly": 1154.3,
+       "hourly": 30.38
+      },
+      {
+       "name": "Electrical worker grade 7",
+       "group": "",
+       "detail": "",
+       "weekly": 1221.1,
+       "hourly": 32.13
+      },
+      {
+       "name": "Electrical worker grade 8",
+       "group": "",
+       "detail": "",
+       "weekly": 1283.1,
+       "hourly": 33.77
+      },
+      {
+       "name": "Electrical worker grade 9",
+       "group": "",
+       "detail": "",
+       "weekly": 1309.5,
+       "hourly": 34.46
+      },
+      {
+       "name": "Electrical worker grade 10",
+       "group": "",
+       "detail": "",
+       "weekly": 1415.0,
+       "hourly": 37.24
+      }
+     ]
+    }
+   ],
+   "penalties": [],
+   "source": "https://awards.fairwork.gov.au/MA000025.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000038",
+   "slug": "transport",
+   "short": "Truck driving and warehousing (road transport)",
+   "blurb": "Truck drivers, couriers and distribution centre workers.",
+   "name": "Road Transport and Distribution Award 2020",
+   "min_hourly": 26.87,
+   "tables": [
+    {
+     "caption": "An employer must pay adult employees the following minimum rates for ordinary hours worked by the employee: (a) Transport employees",
+     "rows": [
+      {
+       "name": "Transport Worker Grade 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1021.0,
+       "hourly": 26.87
+      },
+      {
+       "name": "Transport Worker Grade 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1045.5,
+       "hourly": 27.51
+      },
+      {
+       "name": "Transport Worker Grade 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1057.6,
+       "hourly": 27.83
+      },
+      {
+       "name": "Transport Worker Grade 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1076.2,
+       "hourly": 28.32
+      },
+      {
+       "name": "Transport Worker Grade 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1089.6,
+       "hourly": 28.67
+      },
+      {
+       "name": "Transport Worker Grade 6",
+       "group": "",
+       "detail": "",
+       "weekly": 1102.0,
+       "hourly": 29.0
+      },
+      {
+       "name": "Transport Worker Grade 7",
+       "group": "",
+       "detail": "",
+       "weekly": 1118.0,
+       "hourly": 29.42
+      },
+      {
+       "name": "Transport Worker Grade 8",
+       "group": "",
+       "detail": "",
+       "weekly": 1150.5,
+       "hourly": 30.28
+      },
+      {
+       "name": "Transport Worker Grade 9",
+       "group": "",
+       "detail": "",
+       "weekly": 1169.7,
+       "hourly": 30.78
+      },
+      {
+       "name": "Transport Worker Grade 10",
+       "group": "",
+       "detail": "",
+       "weekly": 1198.8,
+       "hourly": 31.55
+      }
+     ]
+    },
+    {
+     "caption": "Distribution facility employees",
+     "rows": [
+      {
+       "name": "Distribution facility employee level 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1057.6,
+       "hourly": 27.83
+      },
+      {
+       "name": "Distribution facility employee level 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1076.2,
+       "hourly": 28.32
+      },
+      {
+       "name": "Distribution facility employee level 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1118.0,
+       "hourly": 29.42
+      },
+      {
+       "name": "Distribution facility employee level 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1169.7,
+       "hourly": 30.78
+      }
+     ]
+    },
+    {
+     "caption": "Minimum rates—oil distribution workers An employer must pay adult employees the following minimum rates for ordinary hours worked by the employee",
+     "rows": [
+      {
+       "name": "Transport Worker Grade 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1021.0,
+       "hourly": 29.17
+      },
+      {
+       "name": "Transport Worker Grade 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1045.5,
+       "hourly": 29.87
+      },
+      {
+       "name": "Transport Worker Grade 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1057.6,
+       "hourly": 30.22
+      },
+      {
+       "name": "Transport Worker Grade 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1076.2,
+       "hourly": 30.75
+      },
+      {
+       "name": "Transport Worker Grade 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1089.6,
+       "hourly": 31.13
+      },
+      {
+       "name": "Transport Worker Grade 6",
+       "group": "",
+       "detail": "",
+       "weekly": 1102.0,
+       "hourly": 31.49
+      },
+      {
+       "name": "Transport Worker Grade 7",
+       "group": "",
+       "detail": "",
+       "weekly": 1118.0,
+       "hourly": 31.94
+      },
+      {
+       "name": "Transport Worker Grade 8",
+       "group": "",
+       "detail": "",
+       "weekly": 1150.5,
+       "hourly": 32.87
+      },
+      {
+       "name": "Transport Worker Grade 9",
+       "group": "",
+       "detail": "",
+       "weekly": 1169.7,
+       "hourly": 33.42
+      },
+      {
+       "name": "Transport Worker Grade 10",
+       "group": "",
+       "detail": "",
+       "weekly": 1198.8,
+       "hourly": 34.25
+      }
+     ]
+    }
+   ],
+   "penalties": [
+    [
+     [
+      "Shift",
+      "Penalty rate",
+      "Casual penalty rate"
+     ],
+     [
+      "",
+      "% of ordinary hourly rate"
+     ],
+     [
+      "Saturday",
+      "150",
+      "175"
+     ],
+     [
+      "Sunday",
+      "200",
+      "225"
+     ],
+     [
+      "Public holidays",
+      "250",
+      "275"
+     ]
+    ]
+   ],
+   "source": "https://awards.fairwork.gov.au/MA000038.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000084",
+   "slug": "storage",
+   "short": "Warehouse and wholesale (storage services)",
+   "blurb": "Storeworkers and wholesale employees.",
+   "name": "Storage Services and Wholesale Award 2020",
+   "min_hourly": 27.08,
+   "tables": [
+    {
+     "caption": "Minimum rates The minimum rates of pay for an adult employee are set out below",
+     "rows": [
+      {
+       "name": "Storeworker grade 1—on commencement",
+       "group": "",
+       "detail": "",
+       "weekly": 1029.1,
+       "hourly": 27.08
+      },
+      {
+       "name": "Storeworker grade 1—after 3 months",
+       "group": "",
+       "detail": "",
+       "weekly": 1041.6,
+       "hourly": 27.41
+      },
+      {
+       "name": "Storeworker grade 1—after 12 months",
+       "group": "",
+       "detail": "",
+       "weekly": 1053.5,
+       "hourly": 27.72
+      },
+      {
+       "name": "Storeworker grade 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1062.8,
+       "hourly": 27.97
+      },
+      {
+       "name": "Storeworker grade 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1093.1,
+       "hourly": 28.77
+      },
+      {
+       "name": "Storeworker grade 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1125.3,
+       "hourly": 29.61
+      },
+      {
+       "name": "Wholesale employee level 1—on commencement",
+       "group": "",
+       "detail": "",
+       "weekly": 1029.1,
+       "hourly": 27.08
+      },
+      {
+       "name": "Wholesale employee level 1—after 3 months",
+       "group": "",
+       "detail": "",
+       "weekly": 1041.6,
+       "hourly": 27.41
+      },
+      {
+       "name": "Wholesale employee level 1—after 12 months",
+       "group": "",
+       "detail": "",
+       "weekly": 1053.5,
+       "hourly": 27.72
+      },
+      {
+       "name": "Wholesale employee level 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1062.8,
+       "hourly": 27.97
+      },
+      {
+       "name": "Wholesale employee level 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1093.1,
+       "hourly": 28.77
+      },
+      {
+       "name": "Wholesale employee level 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1125.3,
+       "hourly": 29.61
+      }
+     ]
+    }
+   ],
+   "penalties": [],
+   "source": "https://awards.fairwork.gov.au/MA000084.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000005",
+   "slug": "hair-beauty",
+   "short": "Hair and beauty",
+   "blurb": "Hairdressers, barbers, beauty therapists and salon staff.",
+   "name": "Hair and Beauty Industry Award 2020",
+   "min_hourly": 27.81,
+   "tables": [
+    {
+     "caption": "Minimum rates",
+     "rows": [
+      {
+       "name": "Hair and beauty employee level 1",
+       "group": "",
+       "detail": "",
+       "weekly": 1056.8,
+       "hourly": 27.81
+      },
+      {
+       "name": "Hair and beauty employee level 2",
+       "group": "",
+       "detail": "",
+       "weekly": 1081.0,
+       "hourly": 28.45
+      },
+      {
+       "name": "Hair and beauty employee level 3",
+       "group": "",
+       "detail": "",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Hair and beauty employee level 4",
+       "group": "",
+       "detail": "",
+       "weekly": 1139.9,
+       "hourly": 30.0
+      },
+      {
+       "name": "Hair and beauty employee level 5",
+       "group": "",
+       "detail": "",
+       "weekly": 1174.0,
+       "hourly": 30.89
+      },
+      {
+       "name": "Hair and beauty employee level 6",
+       "group": "",
+       "detail": "",
+       "weekly": 1215.9,
+       "hourly": 32.0
+      }
+     ]
+    }
+   ],
+   "penalties": [
+    [
+     [
+      "For overtime worked:",
+      "Full-time and part-time employees",
+      "Casual employees"
+     ],
+     [
+      "",
+      "% of minimum hourly rate",
+      "% of minimum hourly rate"
+     ],
+     [
+      "Monday to Saturday—first 3 hours",
+      "150",
+      "175"
+     ],
+     [
+      "Monday to Saturday—after 3 hours",
+      "200",
+      "225"
+     ],
+     [
+      "Sunday—all overtime hours",
+      "200",
+      "225"
+     ],
+     [
+      "Public holiday—all overtime hours",
+      "250",
+      "250"
+     ],
+     [
+      "Rostered day off—all overtime hours",
+      "200",
+      "–"
+     ]
+    ],
+    [
+     [
+      "For ordinary hours worked:",
+      "Full-time and part-time employees"
+     ],
+     [
+      "",
+      "% of minimum hourly rate"
+     ],
+     [
+      "Saturday—between 7.00 am and 6.00 pm",
+      "133"
+     ],
+     [
+      "Sunday—between 10.00 am and 5.00 pm",
+      "200"
+     ],
+     [
+      "Public holiday—any time of day",
+      "250"
+     ],
+     [
+      "Rostered day off—any time of day",
+      "200"
+     ]
+    ]
+   ],
+   "source": "https://awards.fairwork.gov.au/MA000005.html",
+   "fetched": "2026-11-26"
+  },
+  {
+   "code": "MA000058",
+   "slug": "clubs",
+   "short": "Clubs",
+   "blurb": "Registered and licensed clubs: RSLs, sports and leagues clubs.",
+   "name": "Registered and Licensed Clubs Award 2020",
+   "min_hourly": 25.74,
+   "tables": [
+    {
+     "caption": "(b) 18.3 Adult employee rates",
+     "rows": [
+      {
+       "name": "Introductory",
+       "group": "",
+       "detail": "",
+       "weekly": 978.1,
+       "hourly": 25.74
+      },
+      {
+       "name": "Level 1",
+       "group": "",
+       "detail": "Food and beverage attendant grade 1PGA Associate year 1Guest service grade 1Kitchen attendant grade 1",
+       "weekly": 1004.9,
+       "hourly": 26.44
+      },
+      {
+       "name": "Level 2",
+       "group": "",
+       "detail": "Child care worker grade 1Clerical grade 1Cook grade 1Doorperson/Security officer grade 1Food and beverage attendant grade 2PGA Associate years 2 and 3Front office grade 1Guest service grade 2Kitchen attendant grade 2Leisure attendant grade 1Maintenance and horticultural employee level 1Storeperson grade 1",
+       "weekly": 1029.1,
+       "hourly": 27.08
+      },
+      {
+       "name": "Level 3",
+       "group": "",
+       "detail": "Clerical grade 2Cook grade 2Food and beverage and gaming attendant grade 3Forklift driverFront office grade 2Guest service grade 3HandypersonKitchen attendant grade 3Leisure attendant grade 2Fitness instructorMaintenance and horticultural employee level 2Storeperson grade 2Timekeeper/Security officer grade 2",
+       "weekly": 1062.9,
+       "hourly": 27.97
+      },
+      {
+       "name": "Level 4",
+       "group": "",
+       "detail": "Clerical grade 3Cook (tradesperson) grade 3Food and beverage attendant (tradesperson) grade 4Front office grade 3Guest service grade 4Leisure attendant grade 3Maintenance and horticultural level 3 (tradesperson)Storeperson grade 3",
+       "weekly": 1119.1,
+       "hourly": 29.45
+      },
+      {
+       "name": "Level 5",
+       "group": "",
+       "detail": "Child care worker grade 2Clerical supervisorCook (tradesperson) grade 4Food and beverage and gaming attendant grade 5Assistant or Teaching ProfessionalFront office supervisorGuest service supervisorMaintenance and horticultural level 4",
+       "weekly": 1189.4,
+       "hourly": 31.3
+      },
+      {
+       "name": "Level 6",
+       "group": "",
+       "detail": "Cook (tradesperson) grade 5Child care worker grade 3",
+       "weekly": 1221.1,
+       "hourly": 32.13
+      },
+      {
+       "name": "Level 6",
+       "group": "",
+       "detail": "Club manager of a club with a gross annual revenue of less than $500,000",
+       "weekly": 1221.1,
+       "hourly": 32.13
+      },
+      {
+       "name": "Level 7",
+       "group": "",
+       "detail": "Level A manager",
+       "weekly": 1251.9,
+       "hourly": 32.94
+      },
+      {
+       "name": "Level 8",
+       "group": "",
+       "detail": "Level B managerMaintenance and horticultural management level 1",
+       "weekly": 1304.9,
+       "hourly": 34.34
+      },
+      {
+       "name": "Level 9",
+       "group": "",
+       "detail": "Level C manager",
+       "weekly": 1322.3,
+       "hourly": 34.8
+      },
+      {
+       "name": "Level 10",
+       "group": "",
+       "detail": "Level D manager",
+       "weekly": 1371.0,
+       "hourly": 36.08
+      },
+      {
+       "name": "Level 11",
+       "group": "",
+       "detail": "Level E managerMaintenance and horticultural management level 2",
+       "weekly": 1420.9,
+       "hourly": 37.39
+      },
+      {
+       "name": "Level 12",
+       "group": "",
+       "detail": "Level F managerLead golf professional",
+       "weekly": 1510.8,
+       "hourly": 39.76
+      },
+      {
+       "name": "Level 13",
+       "group": "",
+       "detail": "Level G manager",
+       "weekly": 1540.3,
+       "hourly": 40.53
+      }
+     ]
+    }
+   ],
+   "penalties": [],
+   "source": "https://awards.fairwork.gov.au/MA000058.html",
+   "fetched": "2026-11-26"
+  }
+ ]
+}

@@ -1,0 +1,42 @@
+{
+  "_help": "Employment facts (Fair Work / NES / ATO). Check after each Annual Wage Review (June) and each July. Figures here feed the work tools and pay-rate pages.",
+  "checked": "2026-11-26",
+  "minimum_wage": {
+    "from": "1 July 2026",
+    "increase_pct": 4.75,
+    "hourly": 26.44,
+    "weekly": 1004.90,
+    "casual_hourly": 33.05,
+    "entry_hourly": 25.74,
+    "entry_weekly": 978.10,
+    "casual_loading": 0.25,
+    "junior_pct": [["Under 16", 36.8], ["16", 47.3], ["17", 57.8], ["18", 68.3], ["19", 82.5], ["20", 97.7]],
+    "sources": [
+      ["Fair Work: minimum wage increase starts today (1 July 2026)", "https://www.fairwork.gov.au/newsroom/media-releases/2026-media-releases/july-2026/20260701-minimum-wage-increase-media-release"],
+      ["Fair Work Commission: Annual Wage Review 2026 decision", "https://www.fwc.gov.au/documents/resources/annual-wage-review-2026-decision-announcement.pdf"]
+    ]
+  },
+  "notice_weeks": [[1, 1], [3, 2], [5, 3], [null, 4]],
+  "notice_over45_extra": 1,
+  "redundancy_weeks": [[1, 0], [2, 4], [3, 6], [4, 7], [5, 8], [6, 10], [7, 11], [8, 13], [9, 14], [10, 16], [null, 12]],
+  "annual_leave_weeks": 4,
+  "shiftworker_leave_weeks": 5,
+  "personal_leave_days": 10,
+  "compassionate_leave_days": 2,
+  "family_violence_leave_days": 10,
+  "leave_loading": 0.175,
+  "salary_packaging": {
+    "fbt_year": "1 April 2026 to 31 March 2027",
+    "gross_up": 1.8868,
+    "caps": {
+      "hospital": {"label": "Public or not-for-profit hospital, or public ambulance service", "taxable": 9010, "grossed": 17000},
+      "pbi": {"label": "Charity (PBI) or health promotion charity", "taxable": 15900, "grossed": 30000}
+    },
+    "meal_entertainment_grossed": 2650,
+    "sources": [["ATO: FBT exemption caps for not-for-profit employers", "https://www.ato.gov.au/businesses-and-organisations/hiring-and-paying-your-workers/fringe-benefits-tax/types-of-fringe-benefits/fbt-exemptions-and-concessions"]]
+  },
+  "nes_sources": [
+    ["Fair Work: National Employment Standards", "https://www.fairwork.gov.au/employment-conditions/national-employment-standards"],
+    ["Fair Work: notice of termination and redundancy pay", "https://www.fairwork.gov.au/ending-employment/notice-and-final-pay/notice-period"]
+  ]
+}
