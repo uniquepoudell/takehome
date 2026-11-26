@@ -1,0 +1,19 @@
+{
+  "_help": "Tax figures for one Australian income year. Check every July against the ATO pages in 'sources' and update. static/calc.js reads the same file (embedded by build.py), so the page calculator and the static salary pages always agree.",
+  "year": "2026-27",
+  "year_long": "1 July 2026 to 30 June 2027",
+  "checked": "2026-11-26",
+  "resident": [[18200, 0], [45000, 0.15], [135000, 0.30], [190000, 0.37], [null, 0.45]],
+  "whm": [[45000, 0.15], [135000, 0.30], [190000, 0.37], [null, 0.45]],
+  "foreign": [[135000, 0.30], [190000, 0.37], [null, 0.45]],
+  "lito": {"max": 700, "full_to": 37500, "mid_to": 45000, "mid_value": 325, "zero_at": 66667},
+  "medicare": {"rate": 0.02, "low": 28011, "high": 35013, "_note": "Single low-income thresholds are the 2025-26 figures until the ATO publishes 2026-27."},
+  "help": {"threshold": 69528, "band2": 129717, "band2_base": 9028, "top": 186051, "rate1": 0.15, "rate2": 0.17, "top_rate": 0.10},
+  "super_rate": 0.12,
+  "sources": [
+    ["ATO: new tax cuts (15% rate from 1 July 2026)", "https://www.ato.gov.au/about-ato/new-legislation/in-detail/individuals/personal-income-tax-new-tax-cuts-for-every-australian-taxpayer"],
+    ["ATO: working holiday maker tax rates", "https://www.ato.gov.au/tax-rates-and-codes/tax-rates-working-holiday-makers"],
+    ["ATO: study and training loan repayment thresholds", "https://www.ato.gov.au/tax-rates-and-codes/study-and-training-support-loans-rates-and-repayment-thresholds"],
+    ["ATO: super guarantee", "https://www.ato.gov.au/businesses-and-organisations/super-for-employers/paying-super-contributions/how-much-super-to-pay"]
+  ]
+}

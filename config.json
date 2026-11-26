@@ -1,0 +1,46 @@
+{
+  "_help": "Settings for the take-home pay site. Monetization fields stay empty until the owner signs up; empty means the slot is hidden.",
+  "name": "TakeHome",
+  "tagline": "Australian take-home pay calculator for every visa",
+  "description": "Work out your take-home pay in Australia for 2026-27: residents, working holiday makers (backpacker tax), international students and foreign residents. Weekly, fortnightly, monthly and yearly, with super, Medicare and HELP.",
+  "salary_pages": {
+    "from": 20000,
+    "to": 300000,
+    "step": 1000
+  },
+  "hourly_pages": {
+    "from": 20,
+    "to": 100,
+    "step": 1,
+    "hours": 38
+  },
+  "monetization": {
+    "adsense_client": "",
+    "adsense_slot": "",
+    "tax_return_affiliate": {
+      "label": "",
+      "url": ""
+    }
+  },
+  "cross_sell": [
+    {
+      "title": "Sending money home?",
+      "text": "Compare Wise, Remitly, IME and more before you send. Free.",
+      "url": "https://uniquepoudell.github.io/gorkhapay/",
+      "cta": "Compare transfer fees"
+    },
+    {
+      "title": "Leaving Australia checklist (A$5)",
+      "text": "Don't leave your final pay, tax refund, super or bond behind.",
+      "url": "https://buy.stripe.com/aFa7sN8cKebjdg39pagnK02",
+      "cta": "Get the checklist"
+    },
+    {
+      "title": "Just arrived? (A$5)",
+      "text": "TFN, bank, super, Medicare and your first payslip, step by step.",
+      "url": "https://buy.stripe.com/3cI8wRgJg7MVfob8l6gnK03",
+      "cta": "Get the checklist"
+    }
+  ],
+  "gorkhapay_url": "https://uniquepoudell.github.io/gorkhapay/"
+}
