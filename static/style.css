@@ -61,3 +61,6 @@ ul.cards { list-style:none; padding:0; margin:0; }
 @media (max-width: 520px) { .hr-row { grid-template-columns: 1fr 64px auto 64px auto; font-size:.9rem; } .tool .field input { width: 130px; } }
 .award.raw { min-width: 0; } .award.raw th, .award.raw td { white-space: normal; text-align: left; vertical-align: top; }
 .award td:first-child { white-space: normal; min-width: 160px; }
+table.result.compact{min-width:0}
+table.compact th,table.compact td{padding:.45rem .4rem;font-size:.9rem;white-space:nowrap}
+@media (max-width:480px){table.compact .gross{display:none}table.compact th,table.compact td{padding:.4rem .3rem;font-size:.82rem}}

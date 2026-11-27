@@ -82,6 +82,30 @@ def test_build():
         assert "$77,480" in page and "application/ld+json" in page
 
 
+
+def test_level_pages():
+    import awards
+    from tax import calculate as calc
+    data = json.loads((HERE / "awards.json").read_text())["awards"]
+    retail = next(a for a in data if a["slug"] == "retail")
+    rows = awards.level_rows(retail)
+    assert len(rows) == len(retail["tables"][0]["rows"])
+    assert all(not p.endswith("-.html") for _, _, p in rows)
+    assert not awards.level_rows(next(a for a in data if a["slug"] == "schads"))
+    assert awards.level_label({"slug": "hospitality", "short": "Hospitality"}, "Level 2") == "Hospitality Level 2"
+    assert awards.level_label({"slug": "security", "short": "Security"}, "Security Officer Level 4") == "Security Officer Level 4"
+    with tempfile.TemporaryDirectory() as d:
+        build.build(Path(d) / "pay")
+        row, label, path = rows[0]
+        page = (Path(d) / "pay" / path).read_text()
+        assert f"${row['hourly']:.2f} an hour" in page and label in page
+        net_week = calc(row["hourly"] * 38 * 52, "whm")["net"] / 52
+        assert f"${net_week:,.0f}" in page
+        award = (Path(d) / "pay" / "pay-rates" / "retail.html").read_text()
+        assert path.split("/", 1)[1] in award
+        assert len(list((Path(d) / "pay" / "pay-rates").glob("*/*.html"))) > 100
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):
