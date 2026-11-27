@@ -15,6 +15,10 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from awardparse import penalty_tables, rate_tables, title  # noqa: E402
+from tax import KINDS, calculate  # noqa: E402
+
+# Awards whose first table mixes streams or lacks labels; their level pages wait for clearer labels (see ROADMAP).
+LEVEL_SKIP = {"schads", "nurses", "aged-care", "childcare"}
 
 AWARDS = {
     "MA000004": ("retail", "Retail", "Shops and supermarkets: sales assistants, checkout operators, shelf stackers, store managers."),
@@ -66,8 +70,100 @@ def parse(raw_dir: Path) -> dict:
     return {"awards": result}
 
 
+def slugify(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", s.lower()).strip("-")
+
+
+def clean_name(n: str) -> str:
+    return re.sub(r"(?<=[a-z])\d$", "", n.strip())  # drop footnote markers like "Educator1"
+
+
+LEVEL_PREFIX = {"clerks": "Clerk", "restaurant": "Restaurant", "construction": "Construction",
+                "health-professionals": "Health professional", "horticulture": "Horticulture"}
+
+
+def level_label(a: dict, name: str) -> str:
+    """Names like "Level 2" or "C10 / V5" need the award in front; "Security Officer Level 4" does not."""
+    n = clean_name(name)
+    if re.match(r"(level|introductory|grade|[a-z]\d)", n, re.I):
+        return f"{LEVEL_PREFIX.get(a['slug'], a['short'])} {n[0].lower() + n[1:] if n.startswith('Introductory') else n}"
+    return n
+
+
+def level_rows(a: dict) -> list[tuple[dict, str, str]]:
+    """(row, label, path) for each classification that gets its own page: first table, unique short names."""
+    if a["slug"] in LEVEL_SKIP or not a["tables"]:
+        return []
+    rows = a["tables"][0]["rows"]
+    names = [r["name"] for r in rows]
+    out, seen = [], set()
+    for r in rows:
+        if names.count(r["name"]) > 1 or len(r["name"]) > 60:
+            continue
+        label = level_label(a, r["name"])
+        path = f"pay-rates/{a['slug']}/{slugify(clean_name(r['name']))}.html"
+        if path in seen:
+            continue
+        seen.add(path)
+        out.append((r, label, path))
+    return out
+
+
+def m0(v: float) -> str:
+    return f"${v:,.0f}"
+
+
+def level_page(a: dict, row: dict, label: str, path: str, siblings, page, ad_slot, cross_sell) -> str:
+    up = "../../"
+    h, wk = row["hourly"], row["weekly"]
+    yearly = wk * 52
+    scen = [("Full time 38h", h, 38), ("Casual 38h", h * 1.25, 38), ("Part time 25h", h, 25), ("Casual 15h", h * 1.25, 15)]
+    trs = []
+    for name, rate, hrs in scen:
+        gross_w = rate * hrs
+        cells = "".join(f"<td>{m0(calculate(gross_w * 52, k)['net'] / 52)}</td>" for k in KINDS)
+        trs.append(f"<tr><th>{name}</th><td class='gross'>{m0(gross_w)}</td>{cells}</tr>")
+    heads = "<th>Resident</th><th>Backpacker</th><th>Foreign</th>"
+    table = (f'<div class="tablewrap"><table class="result compact"><thead><tr><th>Week</th><th class="gross">Gross</th>{heads}</tr></thead>'
+             f'<tbody>{"".join(trs)}</tbody></table></div>')
+    r_ft = calculate(yearly, "resident")
+    sib = "".join(f'<li><a href="{up}{p}">{esc(lab)}: ${r["hourly"]:.2f}</a></li>' for r, lab, p in siblings if p != path)
+    body = f"""<p class="crumbs"><a href="{up}index.html">Calculator</a> › <a href="{up}pay-rates/index.html">Pay rates</a> › <a href="{up}pay-rates/{a["slug"]}.html">{esc(a["short"])}</a> › {esc(clean_name(row["name"]))}</p>
+<h1>{esc(label)} pay rate 2026-27</h1>
+<p class="lead">The minimum pay for a {esc(label)} under the {esc(a["name"])} is <strong>${h:.2f} an hour</strong> (${wk:,.2f} for a 38-hour week, about {m0(yearly)} a year). Casuals get at least ${h * 1.25:.2f} an hour with the 25% casual loading. Full time, an Australian resident takes home about <strong>{m0(r_ft["net"] / 52)} a week</strong>.</p>
+{detail_html(row) and f'<p class="small muted">{esc(row["detail"])}</p>'}
+<div class="stats">
+  <div><span>Hourly</span><strong>${h:.2f}</strong></div>
+  <div><span>Casual hourly</span><strong>${h * 1.25:.2f}</strong></div>
+  <div><span>Weekly (38 hrs)</span><strong>${wk:,.0f}</strong></div>
+  <div><span>Yearly</span><strong>{m0(yearly)}</strong></div>
+</div>
+{ad_slot()}
+<section><h2>Take-home pay each week by visa</h2>
+<p>Working holiday makers (417/462) and foreign residents have no tax-free threshold and pay no Medicare levy. International students in Australia for more than six months are usually taxed as residents.</p>
+{table}
+<p class="small muted">Casual rows include the 25% casual loading. Backpacker means working holiday maker (417/462). Weekly take-home after income tax and the Medicare levy, worked out on a full year at the same hours. Super of 12% is paid on top. Weekend, night, public holiday and overtime rates are extra: see the <a href="{up}tools/penalty-rates.html">penalty rates calculator</a>.</p></section>
+<section><h2>Other {esc(a["short"])} levels</h2><ul class="list">{sib}</ul>
+<p><a href="{up}pay-rates/{a["slug"]}.html">All {esc(a["short"])} award rates, penalty rates and overtime</a></p></section>
+<section><h2>Check your pay</h2><ul class="list">
+<li>Your exact take-home: <a href="{up}index.html">tax calculator for every visa</a></li>
+<li>Not sure of your level? The classification definitions are in the award itself: <a href="{esc(a["source"])}">read the {esc(a["short"])} award</a>.</li>
+<li>Think you're underpaid? The <a href="https://www.fairwork.gov.au/contact-us">Fair Work Ombudsman</a> (13 13 94) helps for free, including visa holders.</li></ul>
+<p class="small muted">Sources: adult minimum rate from the <a href="{esc(a["source"])}">{esc(a["name"])}</a> on the Fair Work Commission award viewer (checked {esc(a["fetched"])}); tax from <a href="https://www.ato.gov.au/tax-rates-and-codes">ATO tax rates</a>. Junior, apprentice and allowance rates differ. General information only.</p></section>
+{cross_sell(up)}"""
+    title_ = f"{label} pay rate 2026-27: ${h:.2f} an hour, {m0(r_ft['net'] / 52)} a week take-home"
+    desc = (f"{label} minimum pay from 1 July 2026: ${h:.2f}/hour, ${h * 1.25:.2f} casual, ${wk:,.2f} a week. "
+            f"Take-home pay for residents, backpackers and foreign residents.")
+    return page(path, title_, desc, body, up)
+
+
 def detail_html(r: dict) -> str:
     return f'<br><small class="muted">{esc(r["detail"])}</small>' if r.get("detail") else ""
+
+
+def name_cell(r: dict, links: dict, up: str) -> str:
+    p = links.get(id(r))
+    return f'<a href="{up}{p}">{esc(r["name"])}</a>' if p else esc(r["name"])
 
 
 def salary_link(up: str, weekly: float) -> str:
@@ -79,10 +175,11 @@ def salary_link(up: str, weekly: float) -> str:
 def award_page(a: dict, page, ad_slot, cross_sell) -> tuple[str, str]:
     up = "../"
     parts = []
+    links = {id(r): p for r, _, p in level_rows(a)}
     for i, t in enumerate(a["tables"]):
         cap = t["caption"] or ("Minimum rates" if i == 0 else "More classifications")
         rows = "".join(
-            f'<tr><td>{esc(r["name"])}{detail_html(r)}</td>'
+            f'<tr><td>{name_cell(r, links, up)}{detail_html(r)}</td>'
             f'<td>${r["hourly"]:.2f}</td><td>${r["hourly"] * 1.25:.2f}</td><td>${r["weekly"]:,.2f}</td><td>{salary_link(up, r["weekly"])}</td></tr>'
             for r in t["rows"])
         parts.append(f'<h3>{esc(cap)}</h3><div class="tablewrap"><table class="result award"><thead><tr><th>Classification</th><th>Hourly</th><th>Casual hourly</th><th>Weekly (38 hrs)</th><th>Take-home</th></tr></thead><tbody>{rows}</tbody></table></div>')
@@ -119,6 +216,9 @@ def award_pages(page, ad_slot, cross_sell) -> dict[str, str]:
     for a in json.loads(p.read_text(encoding="utf-8"))["awards"]:
         path, html = award_page(a, page, ad_slot, cross_sell)
         out[path] = html
+        levels = level_rows(a)
+        for row, label, lp in levels:
+            out[lp] = level_page(a, row, label, lp, levels, page, ad_slot, cross_sell)
     return out
 
 
