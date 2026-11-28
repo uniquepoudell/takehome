@@ -1,0 +1,17 @@
+name: Probe junior tables (dev helper)
+on:
+  push:
+    branches: [claude/project-thread-f31vpw]
+    paths: [scripts/probe_junior.py, .github/workflows/probe-junior.yml]
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: {python-version: "3.12"}
+      - run: |
+          python scripts/fetch_awards.py raw $(python -c "import awards; print(' '.join(awards.AWARDS))")
+          python scripts/probe_junior.py raw
