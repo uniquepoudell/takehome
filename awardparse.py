@@ -212,7 +212,7 @@ def junior_meta(full: str, base: str):
     specific = re.search(r"support services|trolley|office|children|engaged on|level|stream", generic, re.I)
     per_level = not re.search(r"\b(grade \d|level \d|[CV]\d+)", base, re.I) and (levels is not None or not specific)
     if specific and levels is None and not re.search(specific.group(0), caption, re.I):
-        caption = full[0].upper() + full[1:]
+        caption = re.sub(r"\s+(will|must) be paid.*$", "", full[0].upper() + full[1:])
     return caption, per_level, levels
 
 

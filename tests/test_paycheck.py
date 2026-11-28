@@ -106,6 +106,56 @@ def test_level_pages():
         assert len(list((Path(d) / "pay" / "pay-rates").glob("*/*.html"))) > 100
 
 
+def tr(cells):
+    return "<tr>" + "".join(f"<td>{c}</td>" for c in cells) + "</tr>"
+
+
+RETAIL_JUNIOR = ("<p>Table 5—Junior rates (retail employee levels 1, 2 and 3 only)</p><table>" + tr(["Column 1", "Column 2"])
+                 + tr(["Age", "% of minimum rate from"])
+                 + tr(["", "1 December2026 to 30 June2027", "1 July 2027 to 30 November2027", "1 December2027 to 30 June 2028"])
+                 + tr(["Under 16 years of age", "45", "45", "45"])
+                 + tr(["18 years of age and employed by the employer for more than 6 months<sup>1</sup>", "75", "80", "85"]) + "</table>"
+                 # schedule B pay guide (dollars) must be ignored
+                 + "<p>B.3.2 Full-time and part-time junior employees—ordinary and penalty rates</p><table>"
+                 + tr(["", "Ordinary"]) + tr(["", "% of junior hourly rate"]) + tr(["Under 16 years of age", "12.51"]) + tr(["16 years", "13.91"]) + "</table>")
+
+
+def test_junior_parse():
+    from awardparse import junior_pct, junior_tables
+    js = junior_tables(RETAIL_JUNIOR)
+    assert len(js) == 1, js
+    j = js[0]
+    assert j["per_level"] and j["levels"] == [1, 2, 3] and j["starts"][0] == "2026-12-01"
+    assert j["rows"][1]["age"].endswith("more than 6 months")
+    assert junior_pct(j, j["rows"][1], "2026-11-28") == {"pct": 75, "starts": "2026-12-01", "next": "2027-07-01", "next_pct": 80}
+    assert junior_pct(j, j["rows"][1], "2027-08-01")["pct"] == 80
+    office = junior_tables("<p>Table 6—Junior office employees</p><table>" + tr(["Column 1 Age", "Column 2 % of minimum rate"])
+                           + tr(["Under 16 years of age", "45%"]) + tr(["20 years of age", "100%"]) + "</table>")
+    assert office and not office[0]["per_level"]
+    store = junior_tables("<p>15.2 Junior rates</p><table>" + tr(["Age", "Percentage of weekly rate for Storeworker grade 1"])
+                          + tr(["Under 16 years of age", "40"]) + tr(["19 years of age and over", "The appropriate adult rate"]) + "</table>")
+    assert store[0]["rows"][1]["pcts"] == [100] and not store[0]["per_level"]
+
+
+def test_junior_pages():
+    import awards
+    # pay guide figures: Retail Level 1 under 16 = $12.51, Hospitality introductory under 17 = $12.87 (x1.5 = $19.31)
+    assert awards.junior_rate(1056.80, 45) == 12.51 and awards.junior_rate(978.10, 50) == 12.87
+    data = {a["slug"]: a for a in json.loads((HERE / "awards.json").read_text())["awards"]}
+    assert sum(1 for a in data.values() if a.get("juniors")) >= 10
+    with tempfile.TemporaryDirectory() as d:
+        build.build(Path(d) / "pay")
+        base = Path(d) / "pay" / "pay-rates"
+        retail = (base / "retail.html").read_text()
+        assert 'id="junior"' in retail and "$12.51" in retail
+        assert 'id="junior"' in (base / "retail" / "retail-employee-level-1.html").read_text()
+        assert 'id="junior"' not in (base / "retail" / "retail-employee-level-6.html").read_text()  # levels 1-3 only
+        assert 'id="junior"' not in (base / "security.html").read_text()
+        hub = (base / "junior.html").read_text()
+        assert "$12.51" in hub and "retail.html#junior" in hub
+        assert "pay-rates/junior.html" in (base / "index.html").read_text()
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

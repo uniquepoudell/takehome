@@ -131,8 +131,129 @@
      ]
     ]
    ],
+   "juniors": [
+    {
+     "caption": "Junior rates (retail employee levels 1, 2 and 3 only)",
+     "base": "% of minimum rate from",
+     "per_level": true,
+     "levels": [
+      1,
+      2,
+      3
+     ],
+     "starts": [
+      "2026-12-01",
+      "2027-07-01",
+      "2027-12-01",
+      "2028-07-01",
+      "2028-12-01",
+      "2029-07-01"
+     ],
+     "rows": [
+      {
+       "age": "Under 16 years of age",
+       "pcts": [
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0,
+        45.0
+       ]
+      },
+      {
+       "age": "16 years of age",
+       "pcts": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+       ]
+      },
+      {
+       "age": "17 years of age",
+       "pcts": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "age": "18 years of age and employed by the employer for 6 months or less",
+       "pcts": [
+        70.0,
+        70.0,
+        70.0,
+        70.0,
+        70.0,
+        70.0
+       ]
+      },
+      {
+       "age": "18 years of age and employed by the employer for more than 6 months",
+       "pcts": [
+        75.0,
+        80.0,
+        85.0,
+        90.0,
+        95.0,
+        100.0
+       ]
+      },
+      {
+       "age": "19 years of age and employed by the employer for 6 months or less",
+       "pcts": [
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0
+       ]
+      },
+      {
+       "age": "19 years of age and employed by the employer for more than 6 months",
+       "pcts": [
+        85.0,
+        90.0,
+        95.0,
+        100.0,
+        100.0,
+        100.0
+       ]
+      },
+      {
+       "age": "20 years of age and employed by the employer for 6 months or less",
+       "pcts": [
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0
+       ]
+      },
+      {
+       "age": "20 years of age and employed by the employer for more than 6 months",
+       "pcts": [
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000004.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000009",
@@ -324,8 +445,94 @@
      ]
     ]
    ],
+   "juniors": [
+    {
+     "caption": "Junior employees (other than junior office employees)",
+     "base": "% of minimum rate",
+     "per_level": true,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 17 years of age",
+       "pcts": [
+        50.0
+       ]
+      },
+      {
+       "age": "17 years of age",
+       "pcts": [
+        60.0
+       ]
+      },
+      {
+       "age": "18 years of age",
+       "pcts": [
+        70.0
+       ]
+      },
+      {
+       "age": "19 years of age",
+       "pcts": [
+        85.0
+       ]
+      },
+      {
+       "age": "20 years of age",
+       "pcts": [
+        100.0
+       ]
+      }
+     ]
+    },
+    {
+     "caption": "Junior office employees",
+     "base": "% of minimum rate",
+     "per_level": false,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 16 years of age",
+       "pcts": [
+        45.0
+       ]
+      },
+      {
+       "age": "16 years of age",
+       "pcts": [
+        55.0
+       ]
+      },
+      {
+       "age": "17 years of age",
+       "pcts": [
+        65.0
+       ]
+      },
+      {
+       "age": "18 years of age",
+       "pcts": [
+        75.0
+       ]
+      },
+      {
+       "age": "19 years of age",
+       "pcts": [
+        90.0
+       ]
+      },
+      {
+       "age": "20 years of age",
+       "pcts": [
+        100.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000009.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000003",
@@ -445,8 +652,125 @@
      ]
     ]
    ],
+   "juniors": [
+    {
+     "caption": "Junior rates",
+     "base": "% of minimum rate from",
+     "per_level": true,
+     "levels": null,
+     "starts": [
+      "2026-12-01",
+      "2027-07-01",
+      "2027-12-01",
+      "2028-07-01",
+      "2028-12-01",
+      "2029-07-01"
+     ],
+     "rows": [
+      {
+       "age": "Under 16 years of age",
+       "pcts": [
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0,
+        40.0
+       ]
+      },
+      {
+       "age": "16 years of age",
+       "pcts": [
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0,
+        50.0
+       ]
+      },
+      {
+       "age": "17 years of age",
+       "pcts": [
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0,
+        60.0
+       ]
+      },
+      {
+       "age": "18 years of age and employed by the employer for 6 months or less",
+       "pcts": [
+        70.0,
+        70.0,
+        70.0,
+        70.0,
+        70.0,
+        70.0
+       ]
+      },
+      {
+       "age": "18 years of age and employed by the employer for more than 6 months",
+       "pcts": [
+        75.0,
+        80.0,
+        85.0,
+        90.0,
+        95.0,
+        100.0
+       ]
+      },
+      {
+       "age": "19 years of age and employed by the employer for 6 months or less",
+       "pcts": [
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0,
+        80.0
+       ]
+      },
+      {
+       "age": "19 years of age and employed by the employer for more than 6 months",
+       "pcts": [
+        85.0,
+        90.0,
+        95.0,
+        100.0,
+        100.0,
+        100.0
+       ]
+      },
+      {
+       "age": "20 years of age and employed by the employer for 6 months or less",
+       "pcts": [
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0,
+        90.0
+       ]
+      },
+      {
+       "age": "20 years of age and employed by the employer for more than 6 months",
+       "pcts": [
+        95.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0,
+        100.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000003.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000119",
@@ -593,8 +917,49 @@
      ]
     ]
    ],
+   "juniors": [
+    {
+     "caption": "Junior rates",
+     "base": "Minimum % of minimum weekly rate",
+     "per_level": true,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 17 years of age",
+       "pcts": [
+        50.0
+       ]
+      },
+      {
+       "age": "17 years of age",
+       "pcts": [
+        60.0
+       ]
+      },
+      {
+       "age": "18 years of age",
+       "pcts": [
+        70.0
+       ]
+      },
+      {
+       "age": "19 years of age",
+       "pcts": [
+        85.0
+       ]
+      },
+      {
+       "age": "20 years of age",
+       "pcts": [
+        100.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000119.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000002",
@@ -761,8 +1126,55 @@
      ]
     ]
    ],
+   "juniors": [
+    {
+     "caption": "Junior rates",
+     "base": "% of minimum rate",
+     "per_level": true,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 16 years of age",
+       "pcts": [
+        45.0
+       ]
+      },
+      {
+       "age": "16 years of age",
+       "pcts": [
+        50.0
+       ]
+      },
+      {
+       "age": "17 years of age",
+       "pcts": [
+        60.0
+       ]
+      },
+      {
+       "age": "18 years of age",
+       "pcts": [
+        70.0
+       ]
+      },
+      {
+       "age": "19 years of age",
+       "pcts": [
+        80.0
+       ]
+      },
+      {
+       "age": "20 years of age",
+       "pcts": [
+        90.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000002.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000022",
@@ -877,8 +1289,55 @@
      ]
     ]
    ],
+   "juniors": [
+    {
+     "caption": "Junior rates (employees of shopping trolley collection contractors)",
+     "base": "Minimum % of minimum adult rate",
+     "per_level": false,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 16 years of age",
+       "pcts": [
+        45.0
+       ]
+      },
+      {
+       "age": "16 years of age",
+       "pcts": [
+        50.0
+       ]
+      },
+      {
+       "age": "17 years of age",
+       "pcts": [
+        60.0
+       ]
+      },
+      {
+       "age": "18 years of age",
+       "pcts": [
+        70.0
+       ]
+      },
+      {
+       "age": "19 years of age",
+       "pcts": [
+        80.0
+       ]
+      },
+      {
+       "age": "20 years of age",
+       "pcts": [
+        90.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000022.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000018",
@@ -1024,8 +1483,9 @@
     }
    ],
    "penalties": [],
+   "juniors": [],
    "source": "https://awards.fairwork.gov.au/MA000018.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000100",
@@ -1554,8 +2014,9 @@
     }
    ],
    "penalties": [],
+   "juniors": [],
    "source": "https://awards.fairwork.gov.au/MA000100.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000120",
@@ -1661,8 +2122,37 @@
     }
    ],
    "penalties": [],
+   "juniors": [
+    {
+     "caption": "Junior employees employed as Children’s Services Employee Level 1— Introductory Educator or Children’s Services Employee Level 2—Educator",
+     "base": "% of adult rate",
+     "per_level": false,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 17 years",
+       "pcts": [
+        70.0
+       ]
+      },
+      {
+       "age": "Under 18 years",
+       "pcts": [
+        80.0
+       ]
+      },
+      {
+       "age": "Under 19 years",
+       "pcts": [
+        90.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000120.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000034",
@@ -2186,8 +2676,9 @@
     }
    ],
    "penalties": [],
+   "juniors": [],
    "source": "https://awards.fairwork.gov.au/MA000034.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000027",
@@ -2361,8 +2852,49 @@
     }
    ],
    "penalties": [],
+   "juniors": [
+    {
+     "caption": "Juniors in Support Services",
+     "base": "% of appropriate adult rate",
+     "per_level": false,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 17 years",
+       "pcts": [
+        50.0
+       ]
+      },
+      {
+       "age": "17 years",
+       "pcts": [
+        60.0
+       ]
+      },
+      {
+       "age": "18 years",
+       "pcts": [
+        70.0
+       ]
+      },
+      {
+       "age": "19 years",
+       "pcts": [
+        80.0
+       ]
+      },
+      {
+       "age": "20 years",
+       "pcts": [
+        90.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000027.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000016",
@@ -2469,8 +3001,9 @@
      ]
     ]
    ],
+   "juniors": [],
    "source": "https://awards.fairwork.gov.au/MA000016.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000028",
@@ -2522,8 +3055,55 @@
     }
    ],
    "penalties": [],
+   "juniors": [
+    {
+     "caption": "Junior rates",
+     "base": "Percentage of appropriate adult rate%",
+     "per_level": true,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 16 years of age",
+       "pcts": [
+        50.0
+       ]
+      },
+      {
+       "age": "16 years of age",
+       "pcts": [
+        60.0
+       ]
+      },
+      {
+       "age": "17 years of age",
+       "pcts": [
+        70.0
+       ]
+      },
+      {
+       "age": "18 years of age",
+       "pcts": [
+        80.0
+       ]
+      },
+      {
+       "age": "19 years of age",
+       "pcts": [
+        90.0
+       ]
+      },
+      {
+       "age": "20 years of age",
+       "pcts": [
+        100.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000028.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000010",
@@ -2894,8 +3474,55 @@
      ]
     ]
    ],
+   "juniors": [
+    {
+     "caption": "Junior engaged on the operations set out in clause 25.4",
+     "base": "% of C13/V2 level",
+     "per_level": false,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 16 years of age",
+       "pcts": [
+        36.8
+       ]
+      },
+      {
+       "age": "At 16 years of age",
+       "pcts": [
+        47.3
+       ]
+      },
+      {
+       "age": "At 17 years of age",
+       "pcts": [
+        57.8
+       ]
+      },
+      {
+       "age": "At 18 years of age",
+       "pcts": [
+        68.3
+       ]
+      },
+      {
+       "age": "At 19 years of age",
+       "pcts": [
+        82.5
+       ]
+      },
+      {
+       "age": "At 20 years of age",
+       "pcts": [
+        97.7
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000010.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000020",
@@ -2996,8 +3623,9 @@
     }
    ],
    "penalties": [],
+   "juniors": [],
    "source": "https://awards.fairwork.gov.au/MA000020.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000025",
@@ -3084,8 +3712,9 @@
     }
    ],
    "penalties": [],
+   "juniors": [],
    "source": "https://awards.fairwork.gov.au/MA000025.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000038",
@@ -3307,8 +3936,37 @@
      ]
     ]
    ],
+   "juniors": [
+    {
+     "caption": "Junior employees",
+     "base": "% of applicable adult minimum hourly rate",
+     "per_level": true,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 19 years",
+       "pcts": [
+        70.0
+       ]
+      },
+      {
+       "age": "19 years",
+       "pcts": [
+        80.0
+       ]
+      },
+      {
+       "age": "20 years",
+       "pcts": [
+        100.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000038.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000084",
@@ -3409,8 +4067,49 @@
     }
    ],
    "penalties": [],
+   "juniors": [
+    {
+     "caption": "Junior rates",
+     "base": "Percentage of weekly rate for Storeworker grade 1 or Wholesale employee level 1%",
+     "per_level": false,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 16 years of age",
+       "pcts": [
+        40.0
+       ]
+      },
+      {
+       "age": "16 years of age",
+       "pcts": [
+        50.0
+       ]
+      },
+      {
+       "age": "17 years of age",
+       "pcts": [
+        60.0
+       ]
+      },
+      {
+       "age": "18 years of age",
+       "pcts": [
+        70.0
+       ]
+      },
+      {
+       "age": "19 years of age and over",
+       "pcts": [
+        100.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000084.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000005",
@@ -3533,8 +4232,37 @@
      ]
     ]
    ],
+   "juniors": [
+    {
+     "caption": "Junior rates",
+     "base": "% of applicable adult rate",
+     "per_level": true,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 17 years",
+       "pcts": [
+        50.0
+       ]
+      },
+      {
+       "age": "17 years of age",
+       "pcts": [
+        75.0
+       ]
+      },
+      {
+       "age": "18 years of age",
+       "pcts": [
+        100.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000005.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   },
   {
    "code": "MA000058",
@@ -3656,8 +4384,43 @@
     }
    ],
    "penalties": [],
+   "juniors": [
+    {
+     "caption": "Junior employees",
+     "base": "% of appropriate adult rate",
+     "per_level": true,
+     "levels": null,
+     "starts": [],
+     "rows": [
+      {
+       "age": "Under 18 years of age",
+       "pcts": [
+        60.0
+       ]
+      },
+      {
+       "age": "18 years of age",
+       "pcts": [
+        70.0
+       ]
+      },
+      {
+       "age": "19 years of age",
+       "pcts": [
+        85.0
+       ]
+      },
+      {
+       "age": "20 years of age",
+       "pcts": [
+        100.0
+       ]
+      }
+     ]
+    }
+   ],
    "source": "https://awards.fairwork.gov.au/MA000058.html",
-   "fetched": "2026-11-26"
+   "fetched": "2026-11-28"
   }
  ]
 }
