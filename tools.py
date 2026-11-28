@@ -120,7 +120,7 @@ def minimum_wage_page(page, ad_slot, cross_sell) -> str:
 {ad_slot()}
 <section><h2>Find your award</h2>{awards_list}</section>
 <section><h2>Junior minimum rates (award-free)</h2>
-<p>Workers under 21 who aren't covered by an award get a percentage of the adult minimum. Awards can set their own junior rates.</p>
+<p>Workers under 21 who aren't covered by an award get a percentage of the adult minimum. Awards can set their own junior rates: see <a href="{up}pay-rates/junior.html">junior pay rates by award</a>.</p>
 <div class="tablewrap"><table class="result"><thead><tr><th>Age</th><th>% of adult</th><th>Hourly</th><th>Casual hourly</th></tr></thead><tbody>{junior}</tbody></table></div></section>
 <section><h2>What full-time minimum wage takes home</h2><p>${weekly * 52:,.0f} a year is <a href="{up}tools/pay-converter.html">{money2(weekly)} a week before tax</a>. Use the <a href="{up}index.html">take-home calculator</a> to see it after tax for your visa.</p></section>
 {sources(MW["sources"])}

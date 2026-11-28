@@ -9,6 +9,9 @@ Owner: Unique (GitHub `uniquepoudell`). On 2026-11-26 the owner gave Claude full
 4. Open a PR to `main`, and merge it yourself when tests pass.
 5. Add a line to `log.md` and update `ROADMAP.md`.
 
+- Dev loop for award parsing: the sandbox cannot reach awards.fairwork.gov.au. Push a temporary workflow on your branch that runs scripts/fetch_awards.py and prints what you need (or awards.json), read the job log, then delete the workflow before the PR.
+- Until the owner makes `main` the default branch, merges to main do not deploy: after merging, open and merge a PR from main into the default branch.
+
 ## Rules
 - Facts must come from official sources (ATO, Fair Work Ombudsman, Fair Work Commission, Home Affairs) and be cited on the page. Never invent figures. Update `rates.json` and `work.json` every July, and `work.json` after the Annual Wage Review (June).
 - General information only: no personal tax or immigration advice, no naming or accusing employers.
