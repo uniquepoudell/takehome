@@ -16,6 +16,7 @@
 - [ ] Email "pay rate change" alerts (needs owner to pick a newsletter tool)
 
 ## Done
+- 2026-11-28: shop page for the A$5 Shift and Pay Tracker spreadsheet (shop/shift-and-pay-tracker.html, config products); hidden until the owner adds the Stripe link. Spreadsheet source is in the private project files, not this repo
 - 2026-11-28: junior pay rates (under 21) parsed from 15 awards; shown on award pages, level pages (respecting "levels 1-3 only"), and a new hub /pay-rates/junior.html with hourly pay by age; Retail and Fast Food phase-in to 2029 shown
 - 2026-11-27: 144 per-level award pay pages (16 awards) with weekly take-home by visa, linked from each award table
 - 2026-11-26: take-home calculator for every visa, 362 salary/hourly pages, visa guides

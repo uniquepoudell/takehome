@@ -55,6 +55,9 @@ def cross_sell(up: str) -> str:
     aff = CFG["monetization"]["tax_return_affiliate"]
     if aff["url"]:
         cards.append({"title": "Get your tax refund", "text": aff["label"], "url": aff["url"], "cta": "Start your return", "sponsored": True})
+    for prod in products_on_sale():
+        cards.append({"title": f'{prod["title"]} (A${prod["price_aud"]:g})', "text": prod["card_text"],
+                      "url": f'shop/{prod["slug"]}.html', "cta": "See what's inside"})
     cards += CFG["cross_sell"]
     out = []
     for c in cards:
@@ -65,7 +68,7 @@ def cross_sell(up: str) -> str:
     return '<section><h2>Helpful next steps</h2><div class="cards">' + "".join(out) + "</div></section>"
 
 
-def page(path: str, title: str, desc: str, body: str, up: str, jsonld: dict | None = None) -> str:
+def page(path: str, title: str, desc: str, body: str, up: str, jsonld: dict | None = None, noindex: bool = False) -> str:
     canon = base_url() + path if base_url() else ""
     m = CFG["monetization"]
     ads_js = (f'<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={esc(m["adsense_client"])}" crossorigin="anonymous"></script>'
@@ -83,6 +86,7 @@ def page(path: str, title: str, desc: str, body: str, up: str, jsonld: dict | No
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:type" content="website">
 {canon_tag}
+{'<meta name="robots" content="noindex">' if noindex else ""}
 <link rel="icon" href="{up}static/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="{up}static/style.css">
 {ads_js}{ld}
@@ -364,6 +368,55 @@ def how_page() -> str:
     return page("how-it-works.html", f"How the {CFG['name']} pay calculator works", "Tax rates, offsets and sources behind the calculator.", body, "")
 
 
+def on_sale(prod: dict) -> bool:
+    return bool(prod.get("price_aud")) and (prod.get("stripe_link") or "").strip().startswith("https://")
+
+
+def products_on_sale() -> list[dict]:
+    return [p for p in CFG.get("products", []) if on_sale(p)]
+
+
+def product_page(prod: dict) -> tuple[str, str]:
+    """Sales page for one of our own digital products. Hidden from search and menus until its Stripe link is set."""
+    up = "../"
+    path = f'shop/{prod["slug"]}.html'
+    live = on_sale(prod)
+    includes = "".join(f"<li>{esc(x)}</li>" for x in prod.get("includes", []))
+    if live:
+        buy = (f'<div class="buybox"><p class="big">A${prod["price_aud"]:g}</p><p class="small">One-off payment by card, Apple Pay or Google Pay '
+               f'through Stripe. Your download link appears straight after payment, and Stripe emails you a receipt.</p>'
+               f'<p><a class="btn" href="{esc(prod["stripe_link"].strip())}" rel="noopener">Buy now</a></p></div>')
+    else:
+        buy = '<div class="buybox"><p class="big">Coming soon</p><p class="small">This is not on sale yet.</p></div>'
+    rows = "".join("<tr>" + "".join(f"<td>{esc(str(c))}</td>" for c in r) + "</tr>" for r in prod.get("preview_rows", []))
+    preview = ""
+    if rows:
+        head = "".join(f"<th>{esc(h)}</th>" for h in prod.get("preview_head", []))
+        preview = (f'<section><h2>What it looks like</h2><p class="small muted">{esc(prod.get("preview_note", ""))}</p>'
+                   f'<div class="tablewrap"><table class="tbl"><thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div></section>')
+    jsonld = None
+    if live:
+        jsonld = {"@context": "https://schema.org", "@type": "Product", "name": prod["title"], "description": prod["summary"],
+                  "brand": {"@type": "Brand", "name": CFG["name"]},
+                  "offers": {"@type": "Offer", "price": f'{float(prod["price_aud"]):.2f}', "priceCurrency": "AUD",
+                             "availability": "https://schema.org/InStock", "url": prod["stripe_link"].strip()}}
+    body = f"""<p class="crumbs"><a href="{up}index.html">Calculator</a> › <a href="{up}tools/index.html">Work tools</a> › {esc(prod["title"])}</p>
+<article class="prose">
+<h1>{esc(prod["title"])}</h1>
+<p class="lead">{esc(prod["summary"])}</p>
+{buy}
+<h2>What's inside</h2>
+<ul>{includes}</ul>
+<p><strong>Format:</strong> {esc(prod.get("format", ""))}</p>
+<p><strong>Who it's for:</strong> {esc(prod.get("for_who", ""))}</p>
+</article>
+{preview}
+<section class="prose"><h2>Please read before you buy</h2><p class="small">{esc(prod.get("notice", ""))} Because this is a digital download,
+please ask us before you buy if you're unsure it suits you. Your rights under Australian Consumer Law still apply.</p>
+<p class="small">Free first: work out a single shift with our <a href="{up}tools/penalty-rates.html">penalty rates calculator</a>, and find your award's rates under <a href="{up}pay-rates/index.html">Pay rates</a>.</p></section>"""
+    return path, page(path, f'{prod["title"]} | {CFG["name"]}', prod["summary"], body, up, jsonld, noindex=not live)
+
+
 def about_page() -> str:
     body = """<article class="prose"><h1>About and privacy</h1>
 <p>TakeHome is a free, independent pay calculator for everyone working in Australia, built first for migrants, students and working holiday makers who are often left out of other calculators.</p>
@@ -394,6 +447,11 @@ def build(out: Path) -> int:
     pages["guides/index.html"] = guides_index()
     pages.update(tools.tool_pages(page, ad_slot, cross_sell, None))
     pages.update(awards.award_pages(page, ad_slot, cross_sell))
+    hidden = set()
+    for prod in CFG.get("products", []):
+        p, c = product_page(prod); pages[p] = c
+        if not on_sale(prod):
+            hidden.add(p)
     for p, c in pages.items():
         (out / p).parent.mkdir(parents=True, exist_ok=True)
         (out / p).write_text(c, encoding="utf-8")
@@ -402,7 +460,7 @@ def build(out: Path) -> int:
         (out / "CNAME").write_text(domain + "\n", encoding="utf-8")
     (out / "robots.txt").write_text("User-agent: *\nAllow: /\n" + (f"Sitemap: {base_url()}sitemap.xml\n" if base_url() else ""), encoding="utf-8")
     if base_url():
-        urls = "".join(f"<url><loc>{esc(base_url() + p)}</loc></url>" for p in pages)
+        urls = "".join(f"<url><loc>{esc(base_url() + p)}</loc></url>" for p in pages if p not in hidden)
         (out / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>', encoding="utf-8")
     return len(pages)
 
