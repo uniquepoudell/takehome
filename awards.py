@@ -14,7 +14,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from awardparse import penalty_tables, rate_tables, title  # noqa: E402
+from awardparse import junior_pct, junior_tables, penalty_tables, rate_tables, title  # noqa: E402
 from tax import KINDS, calculate  # noqa: E402
 
 # Awards whose first table mixes streams or lacks labels; their level pages wait for clearer labels (see ROADMAP).
@@ -59,6 +59,7 @@ def parse(raw_dir: Path) -> dict:
                 entry = {"code": code, "slug": slug, "short": short, "blurb": blurb,
                          "name": re.sub(r"\s*\[MA\d+\]", "", title(html)),
                          "min_hourly": min(hourly), "tables": tables, "penalties": penalty_tables(html),
+                         "juniors": junior_tables(html),
                          "source": f"https://awards.fairwork.gov.au/{code}.html", "fetched": date.today().isoformat()}
                 ok += 1
         if entry is None and code in old:
@@ -88,6 +89,68 @@ def level_label(a: dict, name: str) -> str:
     if re.match(r"(level|introductory|grade|[a-z]\d)", n, re.I):
         return f"{LEVEL_PREFIX.get(a['slug'], a['short'])} {n[0].lower() + n[1:] if n.startswith('Introductory') else n}"
     return n
+
+
+TODAY = date.today().isoformat()
+
+
+def nice_date(iso: str) -> str:
+    d = date.fromisoformat(iso)
+    return f"{d.day} {d:%B %Y}"
+
+
+def junior_rate(weekly: float, pct: float) -> float:
+    """Fair Work works junior rates out from the adult weekly rate, then divides by 38."""
+    return round(round(weekly * pct / 100, 2) / 38, 2)
+
+
+def junior_note(info: dict) -> str:
+    bits = []
+    if info["starts"]:
+        bits.append(f"from {nice_date(info['starts'])}")
+    if info["next"]:
+        bits.append(f"{info['next_pct']:g}% from {nice_date(info['next'])}")
+    return f'<br><small class="muted">{"; ".join(bits)}</small>' if bits else ""
+
+
+def junior_table_html(a: dict, jt: dict, row: dict | None, label: str, today: str = "") -> str:
+    """One junior table. With a classification row, show dollar rates for it; otherwise only the percentages."""
+    today = today or TODAY
+    trs = []
+    for jr in jt["rows"]:
+        info = junior_pct(jt, jr, today)
+        pct = info["pct"]
+        cells = f"<td>{pct:g}%{junior_note(info)}</td>"
+        if row:
+            h = junior_rate(row["weekly"], pct)
+            cells += f"<td>${h:.2f}</td><td>${h * 1.25:.2f}</td><td>${h * 38:,.2f}</td>"
+        trs.append(f"<tr><td>{esc(jr['age'])}</td>{cells}</tr>")
+    heads = "<th>Age</th><th>% of adult rate</th>" + ("<th>Hourly</th><th>Casual hourly</th><th>Weekly (38 hrs)</th>" if row else "")
+    cap = jt["caption"] if jt["caption"] and "junior" in jt["caption"].lower() else "Junior rates"
+    base = f' <span class="muted small">({esc(jt["base"])})</span>' if jt.get("base") and not jt["per_level"] else ""
+    for_ = f" for {esc(label)}" if row else ""
+    return (f'<h3>{esc(cap)}{for_}{base}</h3><div class="tablewrap"><table class="result award junior"><thead><tr>{heads}</tr></thead>'
+            f'<tbody>{"".join(trs)}</tbody></table></div>')
+
+
+def junior_section(a: dict, row: dict | None, label: str, up: str, level_page: bool = False) -> str:
+    js = a.get("juniors") or []
+    if not js:
+        return ""
+    parts = []
+    for i, jt in enumerate(js):
+        use_row = row if (jt["per_level"] and (i == 0 or not level_page)) else None
+        if level_page and not use_row:
+            continue
+        parts.append(junior_table_html(a, jt, use_row, label))
+    if not parts:
+        return ""
+    who = esc(label) if level_page else f"the first level in the table ({esc(label)})"
+    return (f'<section id="junior"><h2>Junior pay rates (under 21)</h2>'
+            f'<p>Under the {esc(a["name"])} workers under 21 can be paid a percentage of the adult rate. Dollar amounts below are for {who}; '
+            f'other levels get the same percentage of their own adult rate. Some awards set different junior rules for particular jobs, so check the award.</p>'
+            f'{"".join(parts)}<p class="small muted">Worked out from the adult weekly rate times the junior percentage, divided by 38, as in the award pay guides. '
+            f'Casual rates add the 25% casual loading. Source: <a href="{esc(a["source"])}">{esc(a["name"])}</a>, junior rates clause (checked {esc(a["fetched"])}).</p></section>')
 
 
 def level_rows(a: dict) -> list[tuple[dict, str, str]]:
@@ -143,13 +206,14 @@ def level_page(a: dict, row: dict, label: str, path: str, siblings, page, ad_slo
 <p>Working holiday makers (417/462) and foreign residents have no tax-free threshold and pay no Medicare levy. International students in Australia for more than six months are usually taxed as residents.</p>
 {table}
 <p class="small muted">Casual rows include the 25% casual loading. Backpacker means working holiday maker (417/462). Weekly take-home after income tax and the Medicare levy, worked out on a full year at the same hours. Super of 12% is paid on top. Weekend, night, public holiday and overtime rates are extra: see the <a href="{up}tools/penalty-rates.html">penalty rates calculator</a>.</p></section>
+{junior_section(a, row, label, up, level_page=True)}
 <section><h2>Other {esc(a["short"])} levels</h2><ul class="list">{sib}</ul>
 <p><a href="{up}pay-rates/{a["slug"]}.html">All {esc(a["short"])} award rates, penalty rates and overtime</a></p></section>
 <section><h2>Check your pay</h2><ul class="list">
 <li>Your exact take-home: <a href="{up}index.html">tax calculator for every visa</a></li>
 <li>Not sure of your level? The classification definitions are in the award itself: <a href="{esc(a["source"])}">read the {esc(a["short"])} award</a>.</li>
 <li>Think you're underpaid? The <a href="https://www.fairwork.gov.au/contact-us">Fair Work Ombudsman</a> (13 13 94) helps for free, including visa holders.</li></ul>
-<p class="small muted">Sources: adult minimum rate from the <a href="{esc(a["source"])}">{esc(a["name"])}</a> on the Fair Work Commission award viewer (checked {esc(a["fetched"])}); tax from <a href="https://www.ato.gov.au/tax-rates-and-codes">ATO tax rates</a>. Junior, apprentice and allowance rates differ. General information only.</p></section>
+<p class="small muted">Sources: adult minimum rate from the <a href="{esc(a["source"])}">{esc(a["name"])}</a> on the Fair Work Commission award viewer (checked {esc(a["fetched"])}); tax from <a href="https://www.ato.gov.au/tax-rates-and-codes">ATO tax rates</a>. Apprentice and allowance rates differ. General information only.</p></section>
 {cross_sell(up)}"""
     title_ = f"{label} pay rate 2026-27: ${h:.2f} an hour, {m0(r_ft['net'] / 52)} a week take-home"
     desc = (f"{label} minimum pay from 1 July 2026: ${h:.2f}/hour, ${h * 1.25:.2f} casual, ${wk:,.2f} a week. "
@@ -193,9 +257,10 @@ def award_page(a: dict, page, ad_slot, cross_sell) -> tuple[str, str]:
     body = f"""<p class="crumbs"><a href="{up}index.html">Calculator</a> › <a href="{up}pay-rates/index.html">Pay rates</a> › {esc(a["short"])}</p>
 <h1>{esc(a["short"])} award pay rates 2026-27</h1>
 <p class="lead">{esc(a["blurb"])} Under the {esc(a["name"])} the lowest adult rate is <strong>${a["min_hourly"]:.2f} an hour</strong> (${a["min_hourly"] * 1.25:.2f} for casuals, including the 25% casual loading).</p>
-<p class="small muted">Rates copied automatically from the official award on the Fair Work website (checked {esc(a["fetched"])}). Junior, apprentice and allowance rates are in the award itself. <a href="{esc(a["source"])}">Read the full award</a>.</p>
+<p class="small muted">Rates copied automatically from the official award on the Fair Work website (checked {esc(a["fetched"])}). {"Junior rates are below; apprentice" if a.get("juniors") else "Junior, apprentice"} and allowance rates are in the award itself. <a href="{esc(a["source"])}">Read the full award</a>.</p>
 {ad_slot()}
 <section><h2>Minimum pay by classification</h2>{"".join(parts)}</section>
+{junior_section(a, first, level_label(a, first["name"]), up)}
 {pen_section}
 <section><h2>Check your pay</h2><ul class="list">
 <li>Find your take-home pay: <a href="{up}index.html">tax calculator for every visa</a></li>

@@ -192,19 +192,47 @@ def junior_tables(html: str, limit: int = 3):
         if not starts and any(len(r["pcts"]) != 1 for r in rows):
             continue
         base = re.sub(r"^(column \d+\s*)?", "", next((c for r in head_rows for c in r if "%" in c or "ercentage" in c), ""), flags=re.I).strip()
-        per_level = not re.search(r"\b(grade \d|level \d|[CV]\d+)", base, re.I)
-        out.append({"caption": _clean_caption(cap), "base": base[:120], "per_level": per_level,
+        caption, per_level, levels = junior_meta(_clean_caption(cap), base)
+        out.append({"caption": caption, "base": base[:120], "per_level": per_level, "levels": levels,
                     "starts": starts, "rows": rows})
         if len(out) >= limit:
             break
     return out
 
 
-def junior_pct(table: dict, row: dict, today: str) -> tuple[float, str | None, float | None]:
-    """(% today, date of the next change, % after it) for one junior row."""
+def junior_meta(full: str, base: str):
+    """(heading, per_level, levels) for a junior table. per_level means the % applies to every classification
+    (or to the listed levels), so dollar rates can be shown; tables for one job stream only show percentages."""
+    caption = _junior_caption(full)
+    generic = re.sub(r"\(other than[^)]*\)", "", full, flags=re.I)
+    levels = None
+    m = re.search(r"levels? ([\d, and]+) only", generic, re.I)
+    if m:
+        levels = [int(n) for n in re.findall(r"\d+", m.group(1))]
+    specific = re.search(r"support services|trolley|office|children|engaged on|level|stream", generic, re.I)
+    per_level = not re.search(r"\b(grade \d|level \d|[CV]\d+)", base, re.I) and (levels is not None or not specific)
+    if specific and levels is None and not re.search(specific.group(0), caption, re.I):
+        caption = full[0].upper() + full[1:]
+    return caption, per_level, levels
+
+
+def _junior_caption(cap: str) -> str:
+    """Short heading for a junior table: keep "Junior rates (...)" style captions, cut clause sentences."""
+    m = re.search(r"\bjuniors?\b.*", cap, re.I)
+    if not m:
+        return "Junior rates"
+    c = m.group(0)
+    c = re.split(r"\s(?:A|An|The|will|must|is|are|as follows)\b|\s\([a-z]\)", c)[0].strip(" ,.:")
+    c = c[0].upper() + c[1:]
+    return c if len(c) <= 90 else "Junior rates"
+
+
+def junior_pct(table: dict, row: dict, today: str) -> dict:
+    """{pct, starts (set when that % only starts later), next, next_pct} for one junior row on a given date."""
     pcts, starts = row["pcts"], table.get("starts") or []
     if not starts:
-        return pcts[0], None, None
+        return {"pct": pcts[0], "starts": None, "next": None, "next_pct": None}
+    future = today < starts[0]
     i = max([k for k, s in enumerate(starts) if s <= today] or [0])
     nxt = next(((starts[k], pcts[k]) for k in range(i + 1, len(starts)) if pcts[k] != pcts[i]), (None, None))
-    return pcts[i], nxt[0], nxt[1]
+    return {"pct": pcts[i], "starts": starts[0] if future else None, "next": nxt[0], "next_pct": nxt[1]}
