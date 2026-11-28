@@ -156,6 +156,29 @@ def test_junior_pages():
         assert "pay-rates/junior.html" in (base / "index.html").read_text()
 
 
+
+def test_shop_hidden_until_stripe_link():
+    import os
+    prod = dict(build.CFG["products"][0])
+    with tempfile.TemporaryDirectory() as d:
+        os.environ["SITE_BASE_URL"] = "https://example.com/"
+        try:
+            for link in ("", "https://buy.stripe.com/test_1"):
+                build.CFG["products"][0]["stripe_link"] = link
+                build.build(Path(d) / "pay")
+                page = (Path(d) / "pay" / "shop" / "shift-and-pay-tracker.html").read_text()
+                sitemap = (Path(d) / "pay" / "sitemap.xml").read_text()
+                tools_page = (Path(d) / "pay" / "tools" / "penalty-rates.html").read_text()
+                if link:
+                    assert "Buy now" in page and "noindex" not in page and "shop/shift-and-pay-tracker.html" in sitemap
+                    assert "shop/shift-and-pay-tracker.html" in tools_page
+                else:
+                    assert "Coming soon" in page and 'content="noindex"' in page and "Buy now" not in page
+                    assert "shift-and-pay-tracker" not in sitemap and "shift-and-pay-tracker" not in tools_page
+        finally:
+            build.CFG["products"][0] = prod
+            os.environ.pop("SITE_BASE_URL", None)
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

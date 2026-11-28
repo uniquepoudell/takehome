@@ -64,3 +64,11 @@ ul.cards { list-style:none; padding:0; margin:0; }
 table.result.compact{min-width:0}
 table.compact th,table.compact td{padding:.45rem .4rem;font-size:.9rem;white-space:nowrap}
 @media (max-width:480px){table.compact .gross{display:none}table.compact th,table.compact td{padding:.4rem .3rem;font-size:.82rem}}
+/* shop: our own digital products */
+.buybox { margin:16px 0; padding:16px 18px; border-radius:var(--radius); background:var(--accent-soft); border:1px solid var(--line); }
+.buybox .big { font-size:2rem; font-weight:800; color:var(--accent); margin:0 0 4px; }
+.btn { display:inline-block; background:var(--accent); color:#fff; font-weight:700; text-decoration:none; padding:10px 18px; border-radius:10px; }
+@media (prefers-color-scheme: dark) { .btn { color:#0d1411; } }
+table.tbl { border-collapse:collapse; font-size:.85rem; font-variant-numeric:tabular-nums; min-width:640px; }
+.tbl th, .tbl td { border:1px solid var(--line); padding:6px 8px; text-align:left; white-space:nowrap; }
+.tbl thead th { background:var(--accent-soft); }
